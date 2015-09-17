@@ -1,6 +1,6 @@
 # COS 121 Project
 
-#Contributers
+##Contributers
 
--Nicolai van Niekerk
--Regan Koopmans
+1. Nicolai van Niekerk
+2. Regan Koopmans
