@@ -3,6 +3,7 @@
 
 /**
 
+@brief The abstact class from which all other units inherit.
 DOXYGEN COMMENT HERE.
 
 */
