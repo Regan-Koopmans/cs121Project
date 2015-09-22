@@ -11,7 +11,10 @@ DOXYGEN COMMENT HERE.
 
 class Ogre : public Monster
 {
-
+  public:
+    Orgre();
+    
+  private:
 };
 
 #endif

@@ -11,6 +11,7 @@ DOXYGEN COMMENT HERE.
 
 class Goblin : public Monster
 {
+
   public:
     Goblin();
 

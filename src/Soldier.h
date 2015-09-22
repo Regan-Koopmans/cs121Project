@@ -7,15 +7,18 @@
 
 /**
 
-DOXYGEN COMMENT HERE.
+@brief
 
 */
 
 class Soldier : public Player
 {
-public:
 
-private:
+  public:
+    Soldier();
+
+  private:
+
 };
 
 #endif

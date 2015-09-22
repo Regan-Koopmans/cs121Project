@@ -11,8 +11,10 @@ DOXYGEN COMMENT HERE.
 
 class Thief : public Player
 {
-  public:
 
+  public:
+    Thief();
+  
   private:
 
 };

@@ -11,6 +11,10 @@ DOXYGEN COMMENT HERE.
 
 class Elemental : public Monster
 {
+  public:
+    Elemental();
+
+  private:
 
 };
 

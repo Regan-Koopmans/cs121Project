@@ -15,6 +15,7 @@ class Mage : public Player
 {
   public:
     Mage();
+    
 
   private:
 

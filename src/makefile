@@ -7,7 +7,7 @@ OBJECTS = Unit Player Monster Mage Soldier UnitFactory
 #dependencies (yet to be added)
 
 %.o: %.cpp
-	%(CC) $< $(CFLAGS) -c -o $@
+	$(CC) $< $(CFLAGS) -c -o $@
 
 all: $(OBJECTS)
 	$(CC) $(LFLAGS) &(OBJECTS) -o $(TARGET)
