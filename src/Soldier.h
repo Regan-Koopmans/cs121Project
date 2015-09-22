@@ -5,6 +5,12 @@
 
 #include "Player.h"
 
+/**
+
+DOXYGEN COMMENT HERE.
+
+*/
+
 class Soldier : public Player
 {
 public:

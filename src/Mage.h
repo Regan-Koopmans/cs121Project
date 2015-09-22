@@ -1,7 +1,5 @@
 // Definition for class Mage
 
-
-
 #ifndef MAGE_H
 #define MAGE_H
 
@@ -16,6 +14,7 @@ DOXYGEN COMMENT HERE.
 class Mage : public Player
 {
   public:
+    Mage();
 
   private:
 

@@ -3,9 +3,17 @@
 
 #include "Unit.h"
 
+/**
+
+DOXYGEN COMMENT HERE.
+
+*/
+
 class UnitFactory
 {
-
+public:
+  Unit * makeLight();
+  Unit * makeDark();
 };
 
 #endif

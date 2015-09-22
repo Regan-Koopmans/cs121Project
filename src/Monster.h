@@ -5,6 +5,12 @@
 
 #include "Unit.h"
 
+/**
+
+DOXYGEN COMMENT HERE.
+
+*/
+
 class Monster : public Unit
 {
 public:
