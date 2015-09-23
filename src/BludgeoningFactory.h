@@ -1,19 +1,21 @@
-#ifndef UNIT_FACTORY_H
-#define UNIT_FACTORY_H
+#ifndef BLUDGEONING_FACTORY_H
+#define BLUDGEONING_FACTORY_H
 
-#include "Unit.h"
+#include "UnitFactory.h"
+#include "Soldier.h"
+#include "Ogre.h"
 
 /**
-
-DOXYGEN COMMENT HERE.
-
+* @class BludgeoningFactory
+* @brief Concrete factory that creates Soldier or Ogre objects
+* @see UnitFactory
 */
 
-class UnitFactory
+class BludgeoningFactory : public UnitFactory
 {
 public:
-  Unit * makeLight();
-  Unit * makeDark();
+	virtual Unit* createPlayer();
+	virtual Unit* createMonster();
 };
 
 #endif

@@ -2,18 +2,22 @@
 #define PIERCING_FACTORY_H
 
 #include "UnitFactory.h"
+#include "Goblin.h"
+#include "Thief.h"
 
 /**
 
-DOXYGEN COMMENT HERE.
+* @class PiercingFactory
+* @brief Concrete factory that creates Thief or Goblin objects
+* @see UnitFactory
 
 */
 
 class PiercingFactory : public UnitFactory
 {
   public:
-    Unit * makeLight();
-    Unit * makeDark();
+    virtual Unit * createPlayer();
+    virtual Unit * createMonster();
 };
 
 #endif

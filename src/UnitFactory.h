@@ -5,15 +5,16 @@
 
 /**
 
-DOXYGEN COMMENT HERE.
+* @class Unitfactory
+* @brief Defines an interface for creating players and monsters
 
 */
 
 class UnitFactory
 {
 public:
-  virtual Unit * makeLight() = 0;
-  virtual Unit * makeDark() = 0;
+  virtual Unit * createPlayer() = 0;
+  virtual Unit * createMonster() = 0;
 };
 
 #endif

@@ -2,6 +2,8 @@
 #include "Unit.h"
 #include "Player.h"
 #include "Mage.h"
+#include "UnitFactory.h"
+#include "MagicFactory.h"
 
 using namespace std;
 
