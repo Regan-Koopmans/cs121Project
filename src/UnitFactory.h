@@ -13,6 +13,7 @@
 class UnitFactory
 {
 public:
+  virtual ~UnitFactory();
   virtual Unit * createPlayer() = 0;
   virtual Unit * createMonster() = 0;
 };

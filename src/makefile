@@ -12,6 +12,9 @@ all: $(OBJECTS)
 Player.o: Unit.h
 main.o: Unit.h Player.h UnitFactory.h MagicFactory.h
 MagicFactory.o: UnitFactory.h
+PiercingFactory.o: UnitFactory.h
+BludgeoningFactory.o: UnitFactory.h
+
 
 %.o: %.cpp
 	$(CC) $< $(CFLAGS) -c -o $@

@@ -7,7 +7,7 @@
 #include "Player.h"
 
 /**
-* @class Soldier
+* @class Mage
 * @brief A concrete Unit; Inherits from Player
 * @see Player
 * @ingroup Players (Light)
