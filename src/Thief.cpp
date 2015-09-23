@@ -2,7 +2,7 @@
 
 Thief::Thief()
 {
-  this->class = "Piercing";
+  this->unitClass = "Piercing";
   this->damage = 10;
   this->health = 60;
 }

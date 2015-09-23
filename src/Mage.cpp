@@ -2,7 +2,7 @@
 
 Mage::Mage()
 {
-  this->class = "Magic";
+  this->unitClass = "Magic";
   this->damage = 5;
   this->health = 80;
 }

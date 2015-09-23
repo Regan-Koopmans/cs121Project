@@ -2,9 +2,14 @@
 
 Unit * Monster::clone()
 {
-  Unit * temp = new Unit;
-  temp->damage = damage;
-  temp->health = health;
-  temp->unitClass = unitClass;
+  Monster * temp = new Monster;
+  temp->setDamage(this->getDamage());
+  temp->setHealth(this->getHealth());
+  temp->setClass(this->getClass());
   return temp;
+}
+
+void Monster::attack(Unit &inputUnit)
+{
+  
 }

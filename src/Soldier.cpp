@@ -2,7 +2,7 @@
 
 Soldier::Soldier()
 {
-  this->class = "Bludgeoning";
+  this->unitClass = "Bludgeoning";
   this->damage = 8;
   this->health = 100;
 }

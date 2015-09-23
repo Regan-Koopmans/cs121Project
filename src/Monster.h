@@ -15,7 +15,9 @@ class Monster : public Unit
 {
 public:
   Unit * clone();
+  void attack(Unit &inputUnit);
 private:
+
 };
 
 #endif

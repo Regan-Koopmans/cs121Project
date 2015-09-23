@@ -13,8 +13,8 @@ DOXYGEN COMMENT HERE.
 class Ogre : public Monster
 {
   public:
-    Orgre();
-    
+    Ogre();
+
   private:
 };
 

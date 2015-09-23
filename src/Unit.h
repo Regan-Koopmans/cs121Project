@@ -19,6 +19,7 @@ DOXYGEN COMMENT HERE.
 class Unit
 {
   public:
+    virtual ~Unit();
     virtual Unit * clone() = 0;
     virtual void attack(Unit &inputUnit) = 0;
     int getDamage();

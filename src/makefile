@@ -1,8 +1,8 @@
 CC = g++
 CFLAGS = -Wall -Werror
 LFLAGS = -static
-TARGET = battefield
-OBJECTS = Unit.o Player.o main.o
+TARGET = battlefield
+OBJECTS = Unit.o Player.o Soldier.o Thief.o Mage.o Monster.o Elemental.o Goblin.o Ogre.o main.o
 
 #dependencies (yet to be added)
 

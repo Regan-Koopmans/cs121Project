@@ -29,3 +29,8 @@ void Unit::setClass(string inputClass)
 {
   unitClass = inputClass;
 }
+
+Unit::~Unit()
+{
+  
+}

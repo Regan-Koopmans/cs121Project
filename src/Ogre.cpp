@@ -2,7 +2,7 @@
 
 Ogre::Ogre()
 {
-  this->class = "Bludgeoning";
+  this->unitClass = "Bludgeoning";
   this->damage = 5;
   this->health = 120;
 }
