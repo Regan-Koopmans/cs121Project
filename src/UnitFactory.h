@@ -13,8 +13,9 @@
 class UnitFactory
 {
 public:
-  virtual Unit * createPlayer() = 0;
-  virtual Unit * createMonster() = 0;
+	virtual ~UnitFactory();
+	virtual Unit * createPlayer() = 0;
+	virtual Unit * createMonster() = 0;
 };
 
 #endif

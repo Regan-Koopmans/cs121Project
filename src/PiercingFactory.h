@@ -15,8 +15,8 @@
 
 class PiercingFactory : public UnitFactory
 {
-  public:
-    virtual Unit * createPlayer();
+public:
+	virtual Unit * createPlayer();
     virtual Unit * createMonster();
 };
 
