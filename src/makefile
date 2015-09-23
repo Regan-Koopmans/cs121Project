@@ -17,6 +17,7 @@ main.o: Unit.h Player.h
 
 clean:
 	rm *.o
+	rm *.exe
 
 run:
 	./$(TARGET)
