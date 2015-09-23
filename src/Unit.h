@@ -10,25 +10,74 @@
 using namespace std;
 
 /**
-
-@brief The abstact class from which all other units inherit.
-DOXYGEN COMMENT HERE.
-
+* @class Unit
+* @brief Is the class from which all concrete Units derive
+*
 */
 
 class Unit
 {
   public:
+
+    /**
+    * @brief virtual destructor
+    */
+
     virtual ~Unit();
+
+    /**
+    * @brief pure virtual function that allows prototypes of Units to be clone.
+    * @return a new Unit cloned from member variables.
+    */
+
     virtual Unit * clone() = 0;
+
+    /**
+    * @brief pure virtual function that allows prototypes of Units to be clone.
+    * @return a new Unit cloned from member variables.
+    */
+
     virtual void attack(Unit &inputUnit) = 0;
+
+    /**
+    * @brief Public interface to damage member variable.
+    * @return int containing value of damage.
+    */
+
     int getDamage();
+
+    /**
+    * @brief Public interface to health member variable.
+    * @return int containing value of health.
+    */
+
     int getHealth();
+
+    /**
+    * @brief Public interface to "class" member variable.
+    * @return string containing the class of object.
+    */
+
     string getClass();
+
   protected:
 
+    /**
+    * @brief Protected interface to modify damage member.
+    */
+
     void setDamage(int inputDamage);
+
+    /**
+    * @brief Protected interface to modify health member.
+    */
+
     void setHealth(int inputHealth);
+
+    /**
+    * @brief Protected interface to modify "class" member.
+    */
+
     void setClass(string inputClass);
 
     string unitClass;

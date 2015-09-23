@@ -1,0 +1,147 @@
+\section{Unit Class Reference}
+\label{class_unit}\index{Unit@{Unit}}
+
+
+Is the class from which all concrete Units derive.  
+
+
+
+
+{\ttfamily \#include $<$Unit.\+h$>$}
+
+Inheritance diagram for Unit\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_unit}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bf $\sim$\+Unit} ()\label{class_unit_a6353fc4c0a329997ad4abcf0dcb4eb27}
+
+\begin{DoxyCompactList}\small\item\em virtual destructor \end{DoxyCompactList}\item 
+virtual {\bf Unit} $\ast$ {\bf clone} ()=0
+\begin{DoxyCompactList}\small\item\em pure virtual function that allows prototypes of Units to be clone. \end{DoxyCompactList}\item 
+virtual void {\bf attack} ({\bf Unit} \&input\+Unit)=0
+\begin{DoxyCompactList}\small\item\em pure virtual function that allows prototypes of Units to be clone. \end{DoxyCompactList}\item 
+int {\bf get\+Damage} ()
+\begin{DoxyCompactList}\small\item\em Public interface to damage member variable. \end{DoxyCompactList}\item 
+int {\bf get\+Health} ()
+\begin{DoxyCompactList}\small\item\em Public interface to health member variable. \end{DoxyCompactList}\item 
+string {\bf get\+Class} ()
+\begin{DoxyCompactList}\small\item\em Public interface to \char`\"{}class\char`\"{} member variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf set\+Damage} (int input\+Damage)\label{class_unit_ac57bb8bbddb45b4b55f841e43f96fe0b}
+
+\begin{DoxyCompactList}\small\item\em Protected interface to modify damage member. \end{DoxyCompactList}\item 
+void {\bf set\+Health} (int input\+Health)\label{class_unit_ac763191e46e663938479a9be72c5bd39}
+
+\begin{DoxyCompactList}\small\item\em Protected interface to modify health member. \end{DoxyCompactList}\item 
+void {\bf set\+Class} (string input\+Class)\label{class_unit_a0da561786edca63a3282b60a1203ef61}
+
+\begin{DoxyCompactList}\small\item\em Protected interface to modify \char`\"{}class\char`\"{} member. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries unit\+Class}\label{class_unit_a0d8686cf27c3054dff4d0961cb3142d6}
+
+\item 
+int {\bfseries damage}\label{class_unit_a92bfb1430ab13e69d4c703a7fc8bafdb}
+
+\item 
+int {\bfseries health}\label{class_unit_aa0d11313f047316fc48c7b523d2fc206}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Is the class from which all concrete Units derive. 
+
+\subsection{Member Function Documentation}
+\index{Unit@{Unit}!attack@{attack}}
+\index{attack@{attack}!Unit@{Unit}}
+\subsubsection[{attack(\+Unit \&input\+Unit)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Unit\+::attack (
+\begin{DoxyParamCaption}
+\item[{{\bf Unit} \&}]{input\+Unit}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_unit_afdd0519bfbdd92edb38be1e14bafbca5}
+
+
+pure virtual function that allows prototypes of Units to be clone. 
+
+\begin{DoxyReturn}{Returns}
+a new \doxyref{Unit}{p.}{class_unit} cloned from member variables. 
+\end{DoxyReturn}
+
+
+Implemented in {\bf Monster} \doxyref{}{p.}{class_monster_a390b3ab1a26e3c3e79d65ad4815e252b}, and {\bf Player} \doxyref{}{p.}{class_player_a6227fdb9ebd053540582793c0d91effa}.
+
+\index{Unit@{Unit}!clone@{clone}}
+\index{clone@{clone}!Unit@{Unit}}
+\subsubsection[{clone()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Unit}$\ast$ Unit\+::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_unit_add809c0669cb6b08afae913da60c4cc1}
+
+
+pure virtual function that allows prototypes of Units to be clone. 
+
+\begin{DoxyReturn}{Returns}
+a new \doxyref{Unit}{p.}{class_unit} cloned from member variables. 
+\end{DoxyReturn}
+
+
+Implemented in {\bf Monster} \doxyref{}{p.}{class_monster_a1ee9cabba47d15d4e196d19561250ee0}, and {\bf Player} \doxyref{}{p.}{class_player_ad690ac4f9f851298abeb0955321ea29e}.
+
+\index{Unit@{Unit}!get\+Class@{get\+Class}}
+\index{get\+Class@{get\+Class}!Unit@{Unit}}
+\subsubsection[{get\+Class()}]{\setlength{\rightskip}{0pt plus 5cm}string Unit\+::get\+Class (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_unit_a4c4dde0419950aa3b44302bbff2af810}
+
+
+Public interface to \char`\"{}class\char`\"{} member variable. 
+
+\begin{DoxyReturn}{Returns}
+string containing the class of object. 
+\end{DoxyReturn}
+\index{Unit@{Unit}!get\+Damage@{get\+Damage}}
+\index{get\+Damage@{get\+Damage}!Unit@{Unit}}
+\subsubsection[{get\+Damage()}]{\setlength{\rightskip}{0pt plus 5cm}int Unit\+::get\+Damage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_unit_a7b0dbed96660669a2234b715018781fa}
+
+
+Public interface to damage member variable. 
+
+\begin{DoxyReturn}{Returns}
+int containing value of damage. 
+\end{DoxyReturn}
+\index{Unit@{Unit}!get\+Health@{get\+Health}}
+\index{get\+Health@{get\+Health}!Unit@{Unit}}
+\subsubsection[{get\+Health()}]{\setlength{\rightskip}{0pt plus 5cm}int Unit\+::get\+Health (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_unit_a610a98a68a3e99227b15af4161f26b70}
+
+
+Public interface to health member variable. 
+
+\begin{DoxyReturn}{Returns}
+int containing value of health. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Unit.\+h\item 
+Unit.\+cpp\end{DoxyCompactItemize}

@@ -5,17 +5,22 @@
 #include "Monster.h"
 
 /**
-
-DOXYGEN COMMENT HERE.
-
+* @class Goblin
+* @brief A concrete Unit; Inherits from Monster
+* @see Monster
+* @ingroup Monsters (Dark)
 */
 
 class Goblin : public Monster
 {
 
   public:
+    /**
+    * Constructor for Goblin class
+    * sets the stats and respective "class" of Goblin.
+    */
     Goblin();
-    
+
   private:
 
 };

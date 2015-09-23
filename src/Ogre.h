@@ -5,14 +5,19 @@
 #include "Monster.h"
 
 /**
-
-DOXYGEN COMMENT HERE.
-
+* @class Ogre
+* @brief A concrete Unit; Inherits from Monster
+* @see Monster
+* @ingroup Monsters (Dark)
 */
 
 class Ogre : public Monster
 {
   public:
+    /**
+    * Constructor for Ogre class
+    * sets the stats and respective "class" of Orgre.
+    */
     Ogre();
 
   private:
