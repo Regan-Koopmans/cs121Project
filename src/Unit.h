@@ -83,6 +83,8 @@ class Unit
     string unitClass;
     int damage;
     int health;
+    unsigned int x;
+    unsigned int y;
 };
 
 #endif

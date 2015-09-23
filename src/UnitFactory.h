@@ -13,8 +13,25 @@
 class UnitFactory
 {
 public:
+
+  /**
+  * @brief Virtual destructor for class Unit
+  */
+
   virtual ~UnitFactory();
+
+  /**
+  * @brief Pure virtual function for creating Players.
+  * @return Unit* of type concrete Player
+  */
+
   virtual Unit * createPlayer() = 0;
+
+  /**
+  * @brief Pure virtual function for creating Mosters.
+  * @return Unit* of type concrete Monsters
+  */
+
   virtual Unit * createMonster() = 0;
 };
 
