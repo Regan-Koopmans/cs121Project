@@ -1,6 +1,7 @@
 #ifndef ELEMENTAL_H
 #define ELEMENTAL_H
 
+#include "Unit.h"
 #include "Monster.h"
 
 /**
@@ -13,7 +14,7 @@ class Elemental : public Monster
 {
   public:
     Elemental();
-
+    
   private:
 
 };

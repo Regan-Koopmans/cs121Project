@@ -14,7 +14,8 @@ DOXYGEN COMMENT HERE.
 class Player : public Unit
 {
   public:
-
+    Unit * clone();
+    void attack(Unit &inputUnit);
   private:
 };
 

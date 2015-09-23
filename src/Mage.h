@@ -3,6 +3,7 @@
 #ifndef MAGE_H
 #define MAGE_H
 
+#include "Unit.h"
 #include "Player.h"
 
 /**

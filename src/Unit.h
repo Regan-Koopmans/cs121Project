@@ -19,9 +19,17 @@ DOXYGEN COMMENT HERE.
 class Unit
 {
   public:
-    virtual Unit * clone();
+    virtual Unit * clone() = 0;
     virtual void attack(Unit &inputUnit) = 0;
+    int getDamage();
+    int getHealth();
+    string getClass();
   protected:
+
+    void setDamage(int inputDamage);
+    void setHealth(int inputHealth);
+    void setClass(string inputClass);
+
     string unitClass;
     int damage;
     int health;

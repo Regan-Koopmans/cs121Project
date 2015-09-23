@@ -1,10 +1,31 @@
 #include "Unit.h"
 
-Unit * Unit::clone()
+int Unit::getDamage()
 {
-  Unit * temp = new Unit();
-  temp->unitClass = unitClass;
-  temp->health = health;
-  temp->damage = damage;
-  return temp;
+    return damage;
+}
+
+int Unit::getHealth()
+{
+  return health;
+}
+
+string Unit::getClass()
+{
+  return unitClass;
+}
+
+void Unit::setDamage(int inputDamage)
+{
+  damage = inputDamage;
+}
+
+void Unit::setHealth(int inputHealth)
+{
+  health = inputHealth;
+}
+
+void Unit::setClass(string inputClass)
+{
+  unitClass = inputClass;
 }

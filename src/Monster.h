@@ -14,7 +14,7 @@ DOXYGEN COMMENT HERE.
 class Monster : public Unit
 {
 public:
-
+  Unit * clone();
 private:
 };
 

@@ -1,6 +1,7 @@
 #ifndef GOBLIN_H
 #define GOBLIN_H
 
+#include "Unit.h"
 #include "Monster.h"
 
 /**
@@ -14,7 +15,7 @@ class Goblin : public Monster
 
   public:
     Goblin();
-
+    
   private:
 
 };

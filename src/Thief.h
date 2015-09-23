@@ -1,6 +1,7 @@
 #ifndef THIEF_H
 #define THEIF_H
 
+#include "Unit.h"
 #include "Player.h"
 
 /**
@@ -14,7 +15,7 @@ class Thief : public Player
 
   public:
     Thief();
-  
+    
   private:
 
 };
