@@ -17,8 +17,8 @@ int main()
 {
   Mage * mage1 = new Mage;
   Unit * mage2 = mage1->clone();
-  UnitFactory* factory = new BludgeoningFactory();
-  Unit* unit = factory->createPlayer();
+  BludgeoningFactory factory;
+  Unit* unit = factory.createPlayer();
 
   cout << mage1->getClass() << endl;
   cout << mage1->getHealth() << endl;
@@ -39,7 +39,7 @@ int main()
 
   delete mage1;
   delete mage2;
-  delete factory;
+ // delete factory;
   delete unit;
   return 0;
 }
