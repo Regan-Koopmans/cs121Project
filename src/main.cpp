@@ -3,6 +3,8 @@
 #include "Player.h"
 #include "Mage.h"
 #include "UnitFactory.h"
+#include "PiercingFactory.h"
+#include "BludgeoningFactory.h"
 #include "MagicFactory.h"
 #include "PiercingFactory.h"
 #include "BludgeoningFactory.h"
@@ -20,23 +22,25 @@ int main()
   BludgeoningFactory factory;
   Unit* unit = factory.createPlayer();
 
-  cout << mage1->getClass() << endl;
-  cout << mage1->getHealth() << endl;
-  cout << mage1->getDamage() << endl;
+  UnitFactory * myMagicFactory = new BludgeoningFactory;
+  Unit * myUnit = myMagicFactory->createMonster();
 
-  cout << endl;
+  cout << myUnit->getClass() << endl;
+  cout << myUnit->getDamage() << endl;
+  cout << myUnit->getHealth() << endl;
 
-  cout << mage2->getClass() << endl;
-  cout << mage2->getHealth() << endl;
-  cout << mage2->getDamage() << endl;
-
+<<<<<<< HEAD
   cout << endl;
 
   cout << unit->getClass() << endl;
   cout << unit->getHealth() << endl;
   cout << unit->getDamage() << endl;
 
+=======
+  delete myMagicFactory;
+>>>>>>> origin/master
 
+  delete myUnit;
   delete mage1;
   delete mage2;
  // delete factory;

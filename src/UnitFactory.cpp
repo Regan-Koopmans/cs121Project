@@ -2,5 +2,10 @@
 
 UnitFactory::~UnitFactory()
 {
+<<<<<<< HEAD
 	
 }
+=======
+
+}
+>>>>>>> origin/master
