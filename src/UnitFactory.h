@@ -14,6 +14,7 @@ class UnitFactory
 {
 public:
 
+
   /**
   * @brief Virtual destructor for class Unit
   */
@@ -33,6 +34,7 @@ public:
   */
 
   virtual Unit * createMonster() = 0;
+
 };
 
 #endif

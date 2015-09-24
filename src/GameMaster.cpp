@@ -3,6 +3,8 @@
 
 using namespace std;
 
+//TO DO: ADD "ROCK PAPER SCISSORS" FUNCTIONALITY
+
 GameMaster::GameMaster()
 {
   map = new Map(5,5);
@@ -11,7 +13,7 @@ GameMaster::GameMaster()
 
 void GameMaster::attachTeam(Team * inputTeam)
 {
-  teams.push_back(inputTeam)
+  teams.push_back(inputTeam);
 }
 
 void GameMaster::detachTeam(Team * inputTeam);
@@ -29,12 +31,19 @@ void GameMaster::notify
 
 void GameMaster::turn()
 {
+  cout << "It is now Team " << currentTurn + 1;
+  cout << "s turn." << endl;
+  teams.at(currentTurn)->turn();
 
-  teams.at(pos)->turn();
-
-  ++pos;
+  ++currentTurn;
   if(pos >= teams.size())
   {
-    pos = 0;
+    currentTurn = 0;
   }
+}
+
+bool GameMaster::moveUnit(Unit * inputUnit,string direction)
+{
+  //can check if should move, Chain of responsibilities.
+  return (map.moveUnit(inputUnit, direction));
 }

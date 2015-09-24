@@ -3,6 +3,7 @@
 
 #include <vector>
 #include "Unit.h"
+#include <string>
 
 using namespace std;
 
@@ -13,6 +14,7 @@ class GameMaster
     void attachTeam(Team * inputTeam);
     void detachTeam(Team * inputTeam);
     void turn();
+    bool moveUnit(Unit * inputUnit, string direction);
     void notify();
   private:
     Map * map;
