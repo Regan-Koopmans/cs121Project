@@ -10,7 +10,7 @@ using namespace std;
 
 GameMaster::GameMaster()
 {
-  map = new Map(5,5);
+  map = new Map(100,100);
   currentTurn = 0;
 }
 

@@ -9,10 +9,12 @@ using namespace std;
 class Team
 {
   public:
+    Team(GameMaster * inputGameMaster);
+    virtual ~Team();
     virtual void update() = 0;
     virtual void attack() = 0;
     virtual void turn() = 0;
-    
+
     virtual void addUnit(Unit * inputUnit);
     void setGameMaster(GameMaster * );
   private:

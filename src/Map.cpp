@@ -1,3 +1,5 @@
+
+
 #include <iostream>
 #include "Map.h"
 #include "Unit.h"
@@ -40,10 +42,19 @@ void Map::update()
 
 void Map::draw()
 {
-  for (unsigned int y = 0; y < MAX_Y; y++)
+  for (unsigned int x = 0; x < MAX_X; x++)
   {
-    cout << "#";
-    cout << endl;
+    for (unsigned int y = 0; y < MAX_Y; y++)
+    {
+        if (grid[x][y] != 0)
+        {
+            cout << "U"; //for Unit
+        }
+        else
+        {
+          cout << ' '; // empty space.
+        }
+    }
   }
 }
 
@@ -65,8 +76,9 @@ int * Map::findUnit(Unit * inputUnit)
   }
 
   int * result = new int[2];
-  result = foundX;
-  result = foundY;
+  result[0] = foundX;
+  result[1] = foundY;
+  return result;
 }
 
 bool Map::moveUnit(Unit * inputUnit, string direction)
@@ -90,7 +102,7 @@ bool Map::moveUnit(Unit * inputUnit, string direction)
   }
   else if (direction == "down")
   {
-    if(coordinates[0] < (MAX_X - 1)) //there is room to move down.
+    if(static_cast<unsigned int>(coordinates[0])< (MAX_X - 1)) //there is room to move down.
     {
     grid[coordinates[0]+1][coordinates[1]] = grid[coordinates[0]][coordinates[1]];
     grid[coordinates[0]][coordinates[1]] = 0;
@@ -106,7 +118,7 @@ bool Map::moveUnit(Unit * inputUnit, string direction)
   }
   else if (direction == "right")
   {
-    if(coordinates[0] < (MAX_Y - 1)) //there is room to move right.
+    if(static_cast<unsigned int>(coordinates[0]) < (MAX_Y - 1)) //there is room to move right.
     {
     grid[coordinates[0]][coordinates[1]+1] = grid[coordinates[0]][coordinates[1]];
     grid[coordinates[0]][coordinates[1]] = 0;
