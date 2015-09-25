@@ -2,6 +2,8 @@
 #define MAP_H
 
 #include <string>
+#include "Unit.h"
+#include "GameMaster.h"
 
 using namespace std;
 
@@ -14,7 +16,7 @@ class Map
     void update();
     void draw();
     bool moveUnit(Unit * inputUnit, string direction);
-    int[2] findUnit();
+    int * findUnit(Unit * inputUnit);
 
   private:
     /**

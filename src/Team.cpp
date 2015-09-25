@@ -5,7 +5,7 @@ void Team::addUnit(Unit * inputUnit)
   units.push_back(inputUnit);
 }
 
-void setGameMaster(GameMaster * inputGameMaster)
+void Team::setGameMaster(GameMaster * inputGameMaster)
 {
   gameMaster = inputGameMaster;
 }

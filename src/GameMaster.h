@@ -5,6 +5,9 @@
 #include "Unit.h"
 #include <string>
 
+class Map;
+class Team;
+
 using namespace std;
 
 class GameMaster
@@ -19,7 +22,7 @@ class GameMaster
   private:
     Map * map;
     vector<Team*> teams;
-    int currentTurn;
+    unsigned int currentTurn;
 };
 
 #endif

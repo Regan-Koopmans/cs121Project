@@ -1,5 +1,8 @@
+#include <iostream>
 #include <vector>
 #include "GameMaster.h"
+#include "Map.h"
+#include "Team.h"
 
 using namespace std;
 
@@ -8,7 +11,7 @@ using namespace std;
 GameMaster::GameMaster()
 {
   map = new Map(5,5);
-  pos = 0;
+  currentTurn = 0;
 }
 
 void GameMaster::attachTeam(Team * inputTeam)
@@ -16,12 +19,12 @@ void GameMaster::attachTeam(Team * inputTeam)
   teams.push_back(inputTeam);
 }
 
-void GameMaster::detachTeam(Team * inputTeam);
+void GameMaster::detachTeam(Team * inputTeam)
 {
   //to-do: add detach functionality.
 }
 
-void GameMaster::notify
+void GameMaster::notify()
 {
   for (unsigned int x = 0; x < teams.size(); x++)
   {
@@ -36,7 +39,7 @@ void GameMaster::turn()
   teams.at(currentTurn)->turn();
 
   ++currentTurn;
-  if(pos >= teams.size())
+  if(currentTurn >= teams.size())
   {
     currentTurn = 0;
   }
@@ -45,5 +48,5 @@ void GameMaster::turn()
 bool GameMaster::moveUnit(Unit * inputUnit,string direction)
 {
   //can check if should move, Chain of responsibilities.
-  return (map.moveUnit(inputUnit, direction));
+  return (map->moveUnit(inputUnit, direction));
 }
