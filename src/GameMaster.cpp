@@ -10,7 +10,7 @@ using namespace std;
 
 GameMaster::GameMaster()
 {
-  map = new Map(100,100);
+  map = new Map(50,50);
   currentTurn = 0;
 }
 
@@ -49,4 +49,16 @@ bool GameMaster::moveUnit(Unit * inputUnit,string direction)
 {
   //can check if should move, Chain of responsibilities.
   return (map->moveUnit(inputUnit, direction));
+}
+
+void GameMaster::drawMap()
+{
+    map->draw();
+}
+
+void GameMaster::addUnit(Team * inputTeam, Unit * inputUnit, unsigned int x, unsigned int y)
+{
+  inputTeam->addUnit(inputUnit);
+
+  map->setMapTile(inputUnit,x,y);
 }

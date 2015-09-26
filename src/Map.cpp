@@ -32,6 +32,16 @@ Map::Map(unsigned int x, unsigned int y)
 {
   MAX_X = x;
   MAX_Y = y;
+
+  grid = new Unit ** [MAX_X];
+  for (unsigned int x = 0; x < MAX_X; x++)
+  {
+    grid[x] = new Unit * [MAX_Y];
+    for (unsigned int y = 0; y < MAX_Y; y++ )
+    {
+      grid[x][y] = 0;
+    }
+  }
 }
 
 void Map::update()
@@ -48,13 +58,14 @@ void Map::draw()
     {
         if (grid[x][y] != 0)
         {
-            cout << "U"; //for Unit
+            cout << "@"; //for Unit
         }
         else
         {
           cout << ' '; // empty space.
         }
     }
+    cout << endl;
   }
 }
 
@@ -131,4 +142,14 @@ bool Map::moveUnit(Unit * inputUnit, string direction)
   }
   delete coordinates;
   return true;
+}
+
+void Map::setMapTile(Unit * inputUnit, unsigned int x, unsigned int y)
+{
+  grid[x][y] = inputUnit;
+}
+
+Unit * Map::getMapTile(unsigned int x, unsigned int y)
+{
+  return grid[x][y];
 }

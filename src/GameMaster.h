@@ -16,9 +16,11 @@ class GameMaster
     GameMaster();
     void attachTeam(Team * inputTeam);
     void detachTeam(Team * inputTeam);
+    void addUnit(Team * inputTeam, Unit * inputUnit, unsigned int x, unsigned int y);
     void turn();
     bool moveUnit(Unit * inputUnit, string direction);
     void notify();
+    void drawMap();
   private:
     Map * map;
     vector<Team*> teams;
