@@ -19,6 +19,8 @@ class Unit
 {
   public:
 
+	Unit();
+  
     /**
     * @brief virtual destructor
     */
@@ -80,6 +82,9 @@ class Unit
 
     void setClass(string inputClass);
   
+    unsigned int get_x();
+    unsigned int get_y();
+  
 protected:
 
     string unitClass;
@@ -90,6 +95,9 @@ protected:
 
     unsigned int x;
     unsigned int y;
+
+   friend class Team;
+
 };
 
 #endif

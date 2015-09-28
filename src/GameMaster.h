@@ -27,6 +27,11 @@ class GameMaster
     void notify();
     void attack(Unit * attackingUnit, Team * attackTeam);
     int getNumberTeams();
+    Team * getTeamAt(int index);
+    void printMap();
+    bool gameOver();
+    void addToMap(Unit * inputUnit,int x, int y);
+  
   private:
     Map * map;
     vector<Team*> teams;

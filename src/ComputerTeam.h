@@ -6,7 +6,9 @@
 class ComputerTeam : public Team
 {
   public:
-
+	  
+    ComputerTeam(GameMaster * inputGameMaster);
+    virtual void initUnits();
     virtual void turn();
     virtual void update();
     virtual void attack();

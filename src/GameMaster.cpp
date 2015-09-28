@@ -10,7 +10,7 @@ using namespace std;
 
 GameMaster::GameMaster()
 {
-  map = new Map(100,100);
+  map = new Map(30,50);
   currentTurn = 0;
 }
 
@@ -34,8 +34,10 @@ void GameMaster::notify()
 
 void GameMaster::turn()
 {
+cout <<endl;
   cout << "It is now Team " << currentTurn + 1;
-  cout << "s turn." << endl;
+  cout << "\'s turn." << endl;
+  cout << endl;
   teams.at(currentTurn)->turn();
 
   ++currentTurn;
@@ -54,10 +56,34 @@ bool GameMaster::moveUnit(Unit * inputUnit,string direction)
 
 void GameMaster::attack(Unit * attackingUnit, Team * attackTeam)
 {
-	
+	int attackingDamage = attackingUnit->getDamage();
+	while(attackingDamage > 0)
+	{
+		attackTeam->takeDamage(attackingUnit->getDamage());
+	}
 }
 
 int GameMaster::getNumberTeams()
 {
 	return teams.size();
+}
+
+Team * GameMaster::getTeamAt(int index)
+{
+	return teams.at(index);
+}
+
+bool GameMaster::gameOver()
+{
+	return (!(teams.size() > 1));
+}
+
+void GameMaster::printMap()
+{
+	map->draw();
+}
+
+void GameMaster::addToMap(Unit * inputUnit,int x, int y)
+{
+	map->setMapTile(inputUnit, x, y);
 }

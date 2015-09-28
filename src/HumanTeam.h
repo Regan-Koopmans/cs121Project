@@ -10,7 +10,7 @@ class HumanTeam : public Team
 {
   public:
     HumanTeam(GameMaster * inputGameMaster);
-    
+    void initUnits();
     virtual void turn();
     virtual void update();
     virtual void attack();

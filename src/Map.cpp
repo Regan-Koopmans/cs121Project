@@ -1,8 +1,7 @@
-
-
 #include <iostream>
 #include "Map.h"
 #include "Unit.h"
+#include "Team.h"
 #include <stdlib.h>
 #include <time.h>
 
@@ -32,29 +31,51 @@ Map::Map(unsigned int x, unsigned int y)
 {
   MAX_X = x;
   MAX_Y = y;
+	
+grid = new Unit ** [MAX_X];
+  for (unsigned int x = 0; x < MAX_X; x++)
+  {
+    grid[x] = new Unit * [MAX_Y];
+    for (unsigned int y = 0; y < MAX_Y; y++ )
+    {
+      grid[x][y] = 0;
+    }
+  }
 }
 
 void Map::update()
 {
-  //At this point does not look like a need for this
-  // but was mentioned in the spec
+	for (int x = 0; x < gameMaster->getNumberTeams(); x++)
+	{
+		for (int y = 0; y < gameMaster->getTeamAt(x)->getSize(); y++)
+		{
+			
+		}
+	}
 }
 
 void Map::draw()
 {
+
   for (unsigned int x = 0; x < MAX_X; x++)
   {
+	  cout << "\t";
     for (unsigned int y = 0; y < MAX_Y; y++)
     {
+	    
         if (grid[x][y] != 0)
         {
-            cout << "U"; //for Unit
+	     cout << "\x1b[34m";
+            cout << (char)167; //for Unit
         }
         else
         {
-          cout << ' '; // empty space.
+	   cout << "\x1b[32m";
+          cout << ','; // empty space.
         }
     }
+    cout << "\x1b[39m";
+    cout << endl;
   }
 }
 
@@ -131,4 +152,9 @@ bool Map::moveUnit(Unit * inputUnit, string direction)
   }
   delete coordinates;
   return true;
+}
+
+ void Map::setMapTile(Unit * inputUnit, int x, int y)
+{
+	grid[x][y] = inputUnit;
 }

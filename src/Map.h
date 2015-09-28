@@ -17,6 +17,7 @@ class Map
     void draw();
     bool moveUnit(Unit * inputUnit, string direction);
     int * findUnit(Unit * inputUnit);
+    void setMapTile(Unit * inputUnit, int x, int y);
 
   private:
     /**

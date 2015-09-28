@@ -25,7 +25,19 @@ int main()
   GameMaster gameMaster;
 
   HumanTeam * team1 = new HumanTeam(&gameMaster);
+  ComputerTeam * team2 = new ComputerTeam(&gameMaster);
   gameMaster.attachTeam(team1);
+  gameMaster.attachTeam(team2);
+	
+team1->initUnits();
+team2->initUnits();
+	
+	while (!gameMaster.gameOver())
+	{
+		gameMaster.turn();
+		gameMaster.printMap();
+	}
+	
   delete team1;
   return 0;
 }
