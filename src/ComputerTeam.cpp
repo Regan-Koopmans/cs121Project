@@ -2,7 +2,7 @@
 
 void ComputerTeam::update()
 {
-
+	cout << "updated" << endl;
 }
 
 void ComputerTeam::attack()

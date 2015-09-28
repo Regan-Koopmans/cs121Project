@@ -79,10 +79,15 @@ class Unit
     */
 
     void setClass(string inputClass);
+  
+protected:
 
     string unitClass;
     int damage;
     int health;
+
+   //Not sure if the below members are still in use.
+
     unsigned int x;
     unsigned int y;
 };

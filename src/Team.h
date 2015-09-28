@@ -6,6 +6,12 @@
 
 using namespace std;
 
+/**
+* @class Team
+* @brief Is the class from which all concrete Teams inherit
+*
+*/
+
 class Team
 {
   public:
@@ -17,7 +23,7 @@ class Team
 
     virtual void addUnit(Unit * inputUnit);
     void setGameMaster(GameMaster * );
-  private:
+  protected:
     GameMaster * gameMaster;
     vector<Unit*> units;
 };

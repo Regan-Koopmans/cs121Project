@@ -10,6 +10,12 @@ class Team;
 
 using namespace std;
 
+/**
+* @class GameMaster
+* @brief Controls the flow of operations in the simulation.
+*
+*/
+
 class GameMaster
 {
   public:
@@ -19,6 +25,8 @@ class GameMaster
     void turn();
     bool moveUnit(Unit * inputUnit, string direction);
     void notify();
+    void attack(Unit * attackingUnit, Team * attackTeam);
+    int getNumberTeams();
   private:
     Map * map;
     vector<Team*> teams;

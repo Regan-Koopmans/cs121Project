@@ -4,6 +4,7 @@
  {
  	return new Thief();
  }
+ 
  Unit* PiercingFactory::createMonster()
  {
  	return new Goblin();

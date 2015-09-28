@@ -39,6 +39,7 @@ void GameMaster::turn()
   teams.at(currentTurn)->turn();
 
   ++currentTurn;
+	
   if(currentTurn >= teams.size())
   {
     currentTurn = 0;
@@ -47,6 +48,16 @@ void GameMaster::turn()
 
 bool GameMaster::moveUnit(Unit * inputUnit,string direction)
 {
-  //can check if should move, Chain of responsibilities.
+  //can check if should move, links to Chain of responsibility.
   return (map->moveUnit(inputUnit, direction));
+}
+
+void GameMaster::attack(Unit * attackingUnit, Team * attackTeam)
+{
+	
+}
+
+int GameMaster::getNumberTeams()
+{
+	return teams.size();
 }
