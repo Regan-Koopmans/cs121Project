@@ -24,18 +24,20 @@ int main()
 {
   GameMaster gameMaster;
 
-  Unit * unit1 = new Mage();
   HumanTeam * team1 = new HumanTeam(&gameMaster);
+  ComputerTeam * team2 = new ComputerTeam(&gameMaster);
   gameMaster.attachTeam(team1);
-  gameMaster.addUnit(team1,unit1,10,10);
-  gameMaster.drawMap();
-  for (int x = 0; x< 3; x++)
-  {
-    gameMaster.moveUnit(unit1,"left");
-    cout << endl;
-    gameMaster.drawMap();
-  }
+  gameMaster.attachTeam(team2);
+	
+team1->initUnits();
+team2->initUnits();
+	
+	while (!gameMaster.gameOver())
+	{
+		gameMaster.turn();
+		gameMaster.printMap();
+	}
+	
   delete team1;
-  delete unit1;
   return 0;
 }

@@ -10,7 +10,7 @@ using namespace std;
 
 GameMaster::GameMaster()
 {
-  map = new Map(50,50);
+  map = new Map(30,50);
   currentTurn = 0;
 }
 
@@ -34,11 +34,14 @@ void GameMaster::notify()
 
 void GameMaster::turn()
 {
+cout <<endl;
   cout << "It is now Team " << currentTurn + 1;
-  cout << "s turn." << endl;
+  cout << "\'s turn." << endl;
+  cout << endl;
   teams.at(currentTurn)->turn();
 
   ++currentTurn;
+	
   if(currentTurn >= teams.size())
   {
     currentTurn = 0;
@@ -47,18 +50,40 @@ void GameMaster::turn()
 
 bool GameMaster::moveUnit(Unit * inputUnit,string direction)
 {
-  //can check if should move, Chain of responsibilities.
+  //can check if should move, links to Chain of responsibility.
   return (map->moveUnit(inputUnit, direction));
 }
 
-void GameMaster::drawMap()
+void GameMaster::attack(Unit * attackingUnit, Team * attackTeam)
 {
-    map->draw();
+	int attackingDamage = attackingUnit->getDamage();
+	while(attackingDamage > 0)
+	{
+		attackTeam->takeDamage(attackingUnit->getDamage());
+	}
 }
 
-void GameMaster::addUnit(Team * inputTeam, Unit * inputUnit, unsigned int x, unsigned int y)
+int GameMaster::getNumberTeams()
 {
-  inputTeam->addUnit(inputUnit);
+	return teams.size();
+}
 
-  map->setMapTile(inputUnit,x,y);
+Team * GameMaster::getTeamAt(int index)
+{
+	return teams.at(index);
+}
+
+bool GameMaster::gameOver()
+{
+	return (!(teams.size() > 1));
+}
+
+void GameMaster::printMap()
+{
+	map->draw();
+}
+
+void GameMaster::addToMap(Unit * inputUnit,int x, int y)
+{
+	map->setMapTile(inputUnit, x, y);
 }

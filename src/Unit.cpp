@@ -1,4 +1,6 @@
 #include "Unit.h"
+#include <stdlib.h>
+#include <time.h>
 
 int Unit::getDamage()
 {
@@ -33,4 +35,22 @@ void Unit::setClass(string inputClass)
 Unit::~Unit()
 {
   
+}
+
+Unit::Unit()
+{
+	srand(time(NULL));
+	
+	x = rand() % 30;
+	y = rand() % 50;
+}
+
+unsigned int Unit::get_x()
+{
+	return x;
+}
+
+unsigned int Unit::get_y()
+{
+	return y;
 }
