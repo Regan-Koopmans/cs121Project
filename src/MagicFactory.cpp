@@ -2,9 +2,25 @@
 
 Unit* MagicFactory::createPlayer()
 {
-	return new Mage();
+	if (!modelPlayer)
+	{
+		modelPlayer = new Mage();
+		return modelPlayer->clone();
+	}
+	else
+	{
+		return modelPlayer->clone();
+	}
 }
 Unit* MagicFactory::createMonster()
 {
-	return new Elemental();
+	if (!modelMonster)
+	{
+		modelMonster = new Elemental();
+		return modelMonster->clone();
+	}
+	else
+	{
+		return modelMonster->clone();
+	}
 }

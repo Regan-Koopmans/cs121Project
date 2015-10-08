@@ -1,6 +1,9 @@
+#include <iostream>
 #include "Team.h"
 #include "GameMaster.h"
 #include "Unit.h"
+
+using namespace std;
 
 Team::Team(GameMaster * inputGameMaster)
 {
@@ -10,7 +13,12 @@ Team::Team(GameMaster * inputGameMaster)
 void Team::addUnit(Unit * inputUnit)
 {
   units.push_back(inputUnit);
-  gameMaster->addToMap(inputUnit,inputUnit->get_x(),inputUnit->get_y());
+  vector<int> location = gameMaster->requestFreeSpace();
+
+  //cout << location.size() << endl;
+
+  if (location.size() == 2)
+    gameMaster->addToMap(inputUnit,(int)location.at(0),(int)location.at(1));
 }
 
 void Team::setGameMaster(GameMaster * inputGameMaster)
@@ -20,7 +28,7 @@ void Team::setGameMaster(GameMaster * inputGameMaster)
 
 Team::~Team()
 {
-  
+
 }
 
 Unit * Team::getUnitAt(int index)
@@ -31,7 +39,7 @@ Unit * Team::getUnitAt(int index)
 void Team::takeDamage(int damage)
 {
 	Unit * temp;
-	
+
 	while (damage > 0)
 	{
 		temp  = units.back();

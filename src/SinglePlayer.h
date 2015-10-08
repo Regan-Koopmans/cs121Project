@@ -3,20 +3,26 @@
 
 #include <string>
 #include "Team.h"
+#include "GameMaster.h"
 
 using namespace std;
 
-class SinglePlayer
+/**
+* @class SinglePlayer A special case of Team, where there is only one unit.
+*/
+
+class SinglePlayer : public Team
 {
   public:
-    SinglePlayer(string class);
+
+    SinglePlayer(GameMaster * gameMaster);
     void initUnits();
     void update();
     void attack();
     void turn();
 
   private:
-
+    int killCount;
 };
 
 #endif

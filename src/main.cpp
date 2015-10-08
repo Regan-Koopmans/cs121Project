@@ -11,6 +11,7 @@
 #include "Team.h"
 #include "HumanTeam.h"
 #include "ComputerTeam.h"
+#include "SinglePlayer.h"
 #include "GameMaster.h"
 
 using namespace std;
@@ -24,20 +25,21 @@ int main()
 {
   GameMaster gameMaster;
 
-  HumanTeam * team1 = new HumanTeam(&gameMaster);
+  SinglePlayer * team1 = new SinglePlayer(&gameMaster);
   ComputerTeam * team2 = new ComputerTeam(&gameMaster);
   gameMaster.attachTeam(team1);
+
   gameMaster.attachTeam(team2);
-	
+
 team1->initUnits();
 team2->initUnits();
-	
+
 	while (!gameMaster.gameOver())
 	{
 		gameMaster.turn();
 		gameMaster.printMap();
 	}
-	
+
   delete team1;
   return 0;
 }

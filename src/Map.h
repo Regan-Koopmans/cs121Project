@@ -1,32 +1,27 @@
 #ifndef MAP_H
 #define MAP_H
-
-#include <string>
-#include "Unit.h"
-#include "GameMaster.h"
-
-using namespace std;
-
 class Map
 {
-  public:
-
-    Map();
-    Map(unsigned int x, unsigned int y);
-    void update();
-    void draw();
-    bool moveUnit(Unit * inputUnit, string direction);
-    int * findUnit(Unit * inputUnit);
-    void setMapTile(Unit * inputUnit, int x, int y);
-
-  private:
+private:
+    char** MapContents;
+    char* FileLocation;
+    void SetMap();
+    int mapSizeX;
+    int mapSizeY;
+public:
+    ~Map();
+    Map(char*);
+    void printMap();
     /**
-    * Variable that is a dynamic 2d array of pointers to units.
-    */
-    Unit *** grid;
-    unsigned int MAX_X;
-    unsigned int MAX_Y;
-    GameMaster * gameMaster;
-};
+     * @TODO Complete the move to allow an update to the map
+     */
+    bool Move(int,int,int,int);
+    void setMap();
+    int getMapSizeX();
+    int getMapSizeY();
+    char getMapTile(int x, int y);
+    void setMapTile(char c, int x, int y);
 
+
+};
 #endif
