@@ -8,7 +8,7 @@
 
 using namespace std;
 
-//TO DO: ADD "ROCK PAPER SCISSORS" FUNCTIONALITY
+
 
 GameMaster::GameMaster()
 {
