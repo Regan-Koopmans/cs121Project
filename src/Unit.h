@@ -28,19 +28,12 @@ class Unit
     virtual ~Unit();
 
     /**
-    * @brief pure virtual function that allows prototypes of Units to be clone.
+    * @brief pure virtual function that allows prototypes of Units to be cloned.
     * @return a new Unit cloned from member variables.
     */
 
     virtual Unit * clone() = 0;
-
-    /**
-    * @brief pure virtual function that allows prototypes of Units to be clone.
-    * @return a new Unit cloned from member variables.
-    */
-
-    virtual void attack(Unit &inputUnit) = 0;
-
+    
     /**
     * @brief Public interface to damage member variable.
     * @return int containing value of damage.

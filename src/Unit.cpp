@@ -57,5 +57,12 @@ unsigned int Unit::get_y()
 
 void Unit::takeDamage(int inputDamage)
 {
-  setHealth(getHealth()-inputDamage);
+  if (getHealth() - inputDamage < 0)
+  {
+    setHealth(0);
+  }
+  else
+  {
+    setHealth(getHealth()-inputDamage);
+  }
 }
