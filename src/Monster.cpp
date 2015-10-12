@@ -9,7 +9,3 @@ Unit * Monster::clone()
   return temp;
 }
 
-void Monster::attack(Unit &inputUnit)
-{
-  
-}

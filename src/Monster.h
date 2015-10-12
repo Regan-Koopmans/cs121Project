@@ -22,13 +22,6 @@ public:
   */
 
   Unit * clone();
-
-  /**
-  * @brief Implementation of inherited virtual function.
-  */
-
-  void attack(Unit &inputUnit);
-
 private:
 
 };

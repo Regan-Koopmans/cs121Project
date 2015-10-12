@@ -22,13 +22,6 @@ class Player : public Unit
     */
 
     Unit * clone();
-
-    /**
-    * @brief Implementation of inherited virtual function.
-    */
-
-    void attack(Unit &inputUnit);
-
   private:
 };
 

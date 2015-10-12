@@ -8,8 +8,3 @@ Unit * Player::clone()
   temp->setClass(this->getClass());
   return temp;
 }
-
-void Player::attack(Unit &inputUnit)
-{
-
-}

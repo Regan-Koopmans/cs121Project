@@ -2,10 +2,26 @@
 
  Unit * PiercingFactory::createPlayer()
  {
- 	return new Thief();
+   if (!modelPlayer)
+   {
+     modelPlayer = new Thief();
+ 	   return modelPlayer->clone();
+   }
+   else
+   {
+     return modelPlayer->clone();
+   }
  }
- 
+
  Unit* PiercingFactory::createMonster()
  {
- 	return new Goblin();
+ 	if (!modelMonster)
+  {
+    modelMonster = new Thief();
+    return modelMonster->clone();
+  }
+  else
+  {
+    return modelMonster->clone();
+  }
  }

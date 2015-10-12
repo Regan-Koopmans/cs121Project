@@ -2,10 +2,26 @@
 
 Unit* BludgeoningFactory::createPlayer()
 {
-	return new Soldier();
+	if (!modelPlayer)
+	{
+		modelPlayer = new Soldier();
+		return modelPlayer->clone();
+	}
+	else
+	{
+		return modelPlayer->clone();
+	}
 }
 
 Unit* BludgeoningFactory::createMonster()
 {
-	return new Ogre();
+	if (!modelMonster)
+	{
+		modelMonster = new Ogre();
+		return modelMonster->clone();
+	}
+	else
+	{
+		return modelMonster->clone();
+	}
 }

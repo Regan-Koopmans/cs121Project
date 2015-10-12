@@ -34,15 +34,15 @@ void Unit::setClass(string inputClass)
 
 Unit::~Unit()
 {
-  
+
 }
 
 Unit::Unit()
 {
 	srand(time(NULL));
-	
-	x = rand() % 30;
-	y = rand() % 50;
+
+	x = rand() % 20;
+	y = rand() % 20;
 }
 
 unsigned int Unit::get_x()
@@ -53,4 +53,16 @@ unsigned int Unit::get_x()
 unsigned int Unit::get_y()
 {
 	return y;
+}
+
+void Unit::takeDamage(int inputDamage)
+{
+  if (getHealth() - inputDamage < 0)
+  {
+    setHealth(0);
+  }
+  else
+  {
+    setHealth(getHealth()-inputDamage);
+  }
 }
