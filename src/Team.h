@@ -3,6 +3,7 @@
 
 #include <vector>
 #include "GameMaster.h"
+#include "Map.h"
 
 using namespace std;
 
@@ -27,8 +28,10 @@ class Team
     Unit * getUnitAt(int index);
     void setGameMaster(GameMaster * );
     int getSize();
+    void setMap(Map*);
   
   protected:
+    Map* map;
     GameMaster * gameMaster;
     vector<Unit*> units;
 };

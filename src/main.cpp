@@ -27,14 +27,14 @@ int main()
 
   SinglePlayer * team1 = new SinglePlayer(&gameMaster);
   ComputerTeam * team2 = new ComputerTeam(&gameMaster);
-  gameMaster.attachTeam(team1);
 
+  gameMaster.attachTeam(team1);
   gameMaster.attachTeam(team2);
 
-team1->initUnits();
-team2->initUnits();
+  team1->initUnits();
+  team2->initUnits();
 
-		gameMaster.playGame();
+  gameMaster.playGame();
 
   delete team1;
   return 0;

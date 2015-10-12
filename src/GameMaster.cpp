@@ -27,6 +27,7 @@ GameMaster::GameMaster()
 
 void GameMaster::attachTeam(Team * inputTeam)
 {
+  inputTeam->setMap(map);
   teams.push_back(inputTeam);
 }
 
@@ -39,6 +40,7 @@ void GameMaster::notify(Team* inputTeam)
 {
   if (!gameOver())
   {
+    removeDestroyedUnits();
     printMap();
     for (unsigned int x = 0; x < teams.size(); x++)
     {
@@ -134,6 +136,8 @@ void GameMaster::attack(Unit * attackingUnit, Unit * defendingUnit)
 		defendingUnit->takeDamage(attackingDamage);
     attackingDamage -= defendingUnit->getHealth();
 	}
+    defendingUnit->takeDamage(500);
+    damageDivider++;
 }
 
 int GameMaster::getNumberTeams()
@@ -217,4 +221,24 @@ vector<int> GameMaster::requestFreeSpace()
   location.push_back(x);
   location.push_back(y);
   return location;
+}
+Unit* GameMaster::locateUnit(int row, int col)
+{
+  return unitGrid[row][col];
+}
+void GameMaster::removeDestroyedUnits()
+{
+  /*for (unsigned int i = 0; i < teams.size(); i++)
+  {
+    for (int j = 0; j < teams[i]->getSize(); j++)
+    {
+      if (teams[i]->getUnitAt(j)->getHealth() == 0)
+      {
+        vector<int> location = locateUnit(teams[i]->getUnitAt(j));
+
+        unitGrid[location.at(0)][location.at(1)] = 0;
+        map->setMapTile(' ', location.at(0), location.at(1));
+      }
+    }
+  }*/
 }

@@ -81,10 +81,74 @@ void SinglePlayer::attack()
   {
     cout << "[Axe] -> Enter direction: ";
   }
-  cin >> direction;
-  cout << '\a';
-}
+  bool hit = false;
 
+  while (!hit)
+  {
+    cin >> direction;
+    // locate the player
+    vector <int> location = gameMaster->locateUnit(this->units[0]);
+    int row = location[0];
+    int column = location[1];
+    if (direction == "w")
+    {
+      for (int i = row - 1; i >= 0; --i)
+      {
+        if (map->getMapTile(i, column) == '&')
+        {
+          gameMaster->attack(this->units[0], gameMaster->locateUnit(i, column));
+          hit = true;
+          break;
+        }
+      }
+    }
+    else if (direction == "s")
+    {
+      for (int i = row + 1; i < map->getMapSizeY(); i++)
+      {
+        if (map->getMapTile(i, column) == '&')
+        {
+          gameMaster->attack(this->units[0], gameMaster->locateUnit(i, column));
+          hit = true;
+          break;
+        }
+      }
+    }
+    else if (direction == "a")
+    {
+      for (int i = column - 1; i >= 0; --i)
+      {
+        if (map->getMapTile(row, i) == '&')
+        {
+          gameMaster->attack(this->units[0], gameMaster->locateUnit(row, i));
+          hit = true;
+          break;
+        }
+      }
+    }
+    else if (direction == "d")
+    {
+      for (int i = column + 1; i < map->getMapSizeX(); i++)
+      {
+        if (map->getMapTile(row, i) == '&')
+        {
+          gameMaster->attack(this->units[0], gameMaster->locateUnit(row, i));
+          hit = true;
+          break;
+        }
+      }
+    }
+    if (hit)
+    {
+      cout << "Target Hit!" << endl;
+    }
+    else
+    {
+      cout << "There is no target in that direction!" << endl;
+      turn();
+    }
+  }
+}
 void SinglePlayer::turn()
 {
   cout << "It is now Player 1's turn " << endl;

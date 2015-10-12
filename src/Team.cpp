@@ -8,6 +8,7 @@ using namespace std;
 Team::Team(GameMaster * inputGameMaster)
 {
   gameMaster = inputGameMaster;
+  map = 0;
 }
 
 void Team::addUnit(Unit * inputUnit)
@@ -59,4 +60,8 @@ void Team::takeDamage(int damage)
 int Team::getSize()
 {
 	return units.size();
+}
+void Team::setMap(Map* m)
+{
+	map = m;
 }

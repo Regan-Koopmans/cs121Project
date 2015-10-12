@@ -33,7 +33,9 @@ class GameMaster
     bool gameOver();
     void addToMap(Unit * inputUnit,int x, int y);
     vector<int> locateUnit(Unit * inputUnit);
+    Unit* locateUnit(int row, int col);
     vector<int> requestFreeSpace();
+    void removeDestroyedUnits();
 
   private:
 
