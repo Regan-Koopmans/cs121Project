@@ -74,6 +74,8 @@ bool GameMaster::moveUnit(Unit * inputUnit,string direction)
     break;
   }
 
+  if (location.size() == 2 && unitGrid [newX][newY] == 0 && map->getMapTile(newX,newY) == ' ')
+  {
   if (location.size() == 2)
   {
     unitGrid[newX][newY] = inputUnit;
@@ -81,7 +83,11 @@ bool GameMaster::moveUnit(Unit * inputUnit,string direction)
     return(map->Move(location.at(0),location.at(1),newX,newY));
   }
   else
+  {
     return false;
+  }
+  }
+  return false;
 }
 
 void GameMaster::attack(Unit * attackingUnit, Unit * defendingUnit)
