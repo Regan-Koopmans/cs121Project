@@ -42,6 +42,8 @@ void ComputerTeam::turn()
 				break;
 		}
 	}
+
+
 }
 
 ComputerTeam::ComputerTeam(GameMaster * inputGameMaster) : Team(inputGameMaster)

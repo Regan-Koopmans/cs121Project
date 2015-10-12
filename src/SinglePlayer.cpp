@@ -89,7 +89,10 @@ void SinglePlayer::turn()
   cout << "What would you like to do? ";
   cin >> inputString;
 
+ 
   if (inputString == "north" || inputString == "n" )
+
+  if (inputString == "north" || inputString == "n")
     gameMaster->moveUnit(units.at(0),"up");
 
   if (inputString == "south" || inputString == "s")
