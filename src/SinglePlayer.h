@@ -17,7 +17,7 @@ class SinglePlayer : public Team
 
     SinglePlayer(GameMaster * gameMaster);
     void initUnits();
-    void update();
+    void update(Team*);
     void attack();
     void turn();
 

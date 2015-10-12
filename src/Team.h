@@ -18,7 +18,7 @@ class Team
     Team(GameMaster * inputGameMaster);
     virtual ~Team();
     virtual void initUnits() = 0;
-    virtual void update() = 0;
+    virtual void update(Team*) = 0;
     virtual void attack() = 0;
     virtual void turn() = 0;
     

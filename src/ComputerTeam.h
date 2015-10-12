@@ -10,7 +10,7 @@ class ComputerTeam : public Team
     ComputerTeam(GameMaster * inputGameMaster);
     virtual void initUnits();
     virtual void turn();
-    virtual void update();
+    virtual void update(Team*);
     virtual void attack();
 
   private:

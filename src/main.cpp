@@ -34,11 +34,7 @@ int main()
 team1->initUnits();
 team2->initUnits();
 
-	while (!gameMaster.gameOver())
-	{
-		gameMaster.turn();
-		gameMaster.printMap();
-	}
+		gameMaster.playGame();
 
   delete team1;
   return 0;

@@ -35,28 +35,21 @@ void GameMaster::detachTeam(Team * inputTeam)
   //to-do: add detach functionality.
 }
 
-void GameMaster::notify()
+void GameMaster::notify(Team* inputTeam)
 {
-  for (unsigned int x = 0; x < teams.size(); x++)
+  if (!gameOver())
   {
-    teams[x]->update();
+    printMap();
+    for (unsigned int x = 0; x < teams.size(); x++)
+    {
+      teams[x]->update(inputTeam);
+    }
   }
 }
 
-void GameMaster::turn()
+void GameMaster::playGame()
 {
-cout << endl;
-  cout << "It is now Team " << currentTurn + 1;
-  cout << "\'s turn." << endl;
-  cout << endl;
-  teams.at(currentTurn)->turn();
-
-  ++currentTurn;
-
-  if(currentTurn >= teams.size())
-  {
-    currentTurn = 0;
-  }
+    teams.at(0)->turn();
 }
 
 bool GameMaster::moveUnit(Unit * inputUnit,string direction)

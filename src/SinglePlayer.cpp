@@ -55,9 +55,12 @@ void SinglePlayer::initUnits()
   delete factory;
 }
 
-void SinglePlayer::update()
+void SinglePlayer::update(Team* inputTeam)
 {
-
+  if (this != inputTeam)
+  {
+    turn();
+  }
 }
 
 void SinglePlayer::attack()
@@ -84,9 +87,10 @@ void SinglePlayer::attack()
 
 void SinglePlayer::turn()
 {
+  cout << "It is now Player 1's turn " << endl;
   string inputString;
 
-  cout << "What would you like to do? ";
+  cout << "\nWhat would you like to do? ";
   cin >> inputString;
 
   if (inputString == "north" || inputString == "n")
@@ -109,4 +113,5 @@ void SinglePlayer::turn()
     cout << "You have conceded! Game over!" << endl;
     exit(0);
   }
+  gameMaster->notify(this);
 }

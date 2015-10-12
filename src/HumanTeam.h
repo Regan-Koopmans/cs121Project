@@ -12,7 +12,7 @@ class HumanTeam : public Team
     HumanTeam(GameMaster * inputGameMaster);
     void initUnits();
     virtual void turn();
-    virtual void update();
+    virtual void update(Team*);
     virtual void attack();
   private:
 

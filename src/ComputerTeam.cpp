@@ -11,9 +11,12 @@
 
 using namespace std;
 
-void ComputerTeam::update()
+void ComputerTeam::update(Team* inputTeam)
 {
-	cout << "updated" << endl;
+	if (this != inputTeam)
+  	{
+  		turn();
+  	}
 }
 
 void ComputerTeam::attack()
@@ -23,7 +26,8 @@ void ComputerTeam::attack()
 
 void ComputerTeam::turn()
 {
-
+	cout << "It is now the Computer's turn " << endl;
+	gameMaster->notify(this);
 }
 
 ComputerTeam::ComputerTeam(GameMaster * inputGameMaster) : Team(inputGameMaster)

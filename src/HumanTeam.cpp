@@ -18,7 +18,7 @@ void HumanTeam::turn()
    cin >> inputCommand;
 }
 
-void HumanTeam::update()
+void HumanTeam::update(Team* inputTeam)
 {
   cout << "Something has happened!" << endl;
 }

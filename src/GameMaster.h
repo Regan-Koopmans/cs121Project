@@ -23,9 +23,9 @@ class GameMaster
     GameMaster();
     void attachTeam(Team * inputTeam);
     void detachTeam(Team * inputTeam);
-    void turn();
+    void playGame();
     bool moveUnit(Unit * inputUnit, string direction);
-    void notify();
+    void notify(Team*);
     void attack(Unit * attackingUnit, Unit * defendingUnit);
     int getNumberTeams();
     Team * getTeamAt(int index);
