@@ -26,10 +26,8 @@ void ComputerTeam::attack()
 
 void ComputerTeam::turn()
 {
-<<<<<<< HEAD
 	cout << "It is now the Computer's turn " << endl;
-	gameMaster->notify(this);
-=======
+
 	int randomDirection;
 	srand(time(NULL));
 	//unit movement
@@ -49,9 +47,7 @@ void ComputerTeam::turn()
 				break;
 		}
 	}
-
-
->>>>>>> origin/master
+	gameMaster->notify(this);
 }
 
 ComputerTeam::ComputerTeam(GameMaster * inputGameMaster) : Team(inputGameMaster)
