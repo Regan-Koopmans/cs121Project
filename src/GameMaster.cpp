@@ -228,17 +228,19 @@ Unit* GameMaster::locateUnit(int row, int col)
 }
 void GameMaster::removeDestroyedUnits()
 {
-  /*for (unsigned int i = 0; i < teams.size(); i++)
+  for (unsigned int i = 0; i < teams.size(); i++)
   {
     for (int j = 0; j < teams[i]->getSize(); j++)
     {
       if (teams[i]->getUnitAt(j)->getHealth() == 0)
       {
         vector<int> location = locateUnit(teams[i]->getUnitAt(j));
-
-        unitGrid[location.at(0)][location.at(1)] = 0;
-        map->setMapTile(' ', location.at(0), location.at(1));
+        if (location.size() > 0)
+        {
+          unitGrid[location.at(0)][location.at(1)] = 0;
+          map->setMapTile(' ', location.at(0), location.at(1));
+        }
       }
     }
-  }*/
+  }
 }

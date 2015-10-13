@@ -31,10 +31,11 @@ void ComputerTeam::turn()
 	int randomDirection;
 	srand(time(NULL));
 	//unit movement
-	
+
 	for (unsigned int x = 0; x < units.size(); x++)
 	{
 		randomDirection = rand () % 4;
+		if (units.at(x)->getHealth() > 0)
 		switch (randomDirection)
 		{
 			case 0: gameMaster->moveUnit(units.at(x),"left");
