@@ -1,9 +1,10 @@
 #include <iostream>
+
 #include <vector>
 #include <time.h>
 #include <stdlib.h>
 #include "GameMaster.h"
-#include "Map.h"
+#include "Map.h"              
 #include "Team.h"
 
 using namespace std;

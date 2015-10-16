@@ -44,6 +44,8 @@ void Map::setMap()
 }
 void Map::printMap()
 {
+    ofstream outputFile;
+    outputFile.open("map.smo");
     for(int i = 0; i < mapSizeX;i++)
     {
       for (int j = 0; j < mapSizeY; j++)
@@ -61,12 +63,18 @@ void Map::printMap()
               cout << "\x1b[34;1m";
 
            cout << getMapTile(i,j);
-
+           if (getMapTile(i,j) == ' ')
+            outputFile << '_';
+          else
+            outputFile << getMapTile(i,j);
 
         cout << "\x1b[37;1m";
       }
         cout << endl;
+        outputFile << '\n';
       }
+
+      outputFile.close();
 }
 
 bool Map::Move(int x, int y, int newX, int newY)
