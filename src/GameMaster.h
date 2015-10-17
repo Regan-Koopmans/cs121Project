@@ -1,5 +1,5 @@
-#ifndef GAME_MASTER_H
-#define GAME_MASTER_H
+#ifndef GAMEMASTER_H
+#define GAMEMASTER_H
 
 #include <vector>
 #include "Unit.h"
@@ -10,39 +10,29 @@ class Team;
 
 using namespace std;
 
-/**
-* @class GameMaster
-* @brief Controls the flow of operations in the simulation.
-*
-*/
-
 class GameMaster
 {
-  public:
-
-    GameMaster();
-    void attachTeam(Team * inputTeam);
-    void detachTeam(Team * inputTeam);
+public:
+	GameMaster();
+    virtual void attachTeam(Team * inputTeam) = 0;
+    virtual void detachTeam(Team * inputTeam) = 0;
     void playGame();
-    bool moveUnit(Unit * inputUnit, string direction);
-    void notify(Team*);
+    virtual bool moveUnit(Unit * inputUnit, string direction) = 0;
+    virtual void notify(Team*) = 0;
     void attack(Unit * attackingUnit, Unit * defendingUnit);
     int getNumberTeams();
     Team * getTeamAt(int index);
-    void printMap();
+    virtual void printMap() = 0;
     bool gameOver();
-    void addToMap(Unit * inputUnit,int x, int y);
-    vector<int> locateUnit(Unit * inputUnit);
-    Unit* locateUnit(int row, int col);
-    vector<int> requestFreeSpace();
-    void removeDestroyedUnits();
-
-  private:
-
-    Unit *** unitGrid;
-    Map * map;
+    virtual void addToMap(Unit * inputUnit,int x, int y) = 0;
+    virtual vector<int> locateUnit(Unit * inputUnit) = 0;
+    virtual Unit* locateUnit(int row, int col) = 0;
+    virtual vector<int> requestFreeSpace() = 0;
+    virtual void removeDestroyedUnits() = 0;
+protected:
     vector<Team*> teams;
     unsigned int currentTurn;
 };
+
 
 #endif

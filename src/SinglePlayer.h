@@ -3,7 +3,7 @@
 
 #include <string>
 #include "Team.h"
-#include "GameMaster.h"
+#include "Master.h"
 
 using namespace std;
 

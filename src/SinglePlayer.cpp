@@ -6,6 +6,7 @@
 #include "MagicFactory.h"
 #include "PiercingFactory.h"
 #include "SinglePlayer.h"
+#include "Master.h"
 
 using namespace std;
 

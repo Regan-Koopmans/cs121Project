@@ -4,7 +4,7 @@
 
 void SinglePlayerGame::setupGame()
 {
-  gameMaster = GameMaster();
+  gameMaster = Master();
 
   SinglePlayer * team1 = new SinglePlayer(&gameMaster);
   ComputerTeam * team2 = new ComputerTeam(&gameMaster);

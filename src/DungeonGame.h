@@ -1,7 +1,7 @@
 #ifndef DUNGEONGAME_H
 #define DUNGEONGAME_H
 
-#include "GameMaster.h"
+#include "Master.h"
 
 /**
 * @class DungeonGame
@@ -29,7 +29,7 @@ class DungeonGame
     /**
     * @brief A instance of GameMaster that is the entry point to the rest of the system.
     */
-    GameMaster gameMaster;
+    Master gameMaster;
 };
 
 #endif
