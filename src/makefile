@@ -2,7 +2,7 @@ CC = g++
 CFLAGS = -Wall -Werror -g
 LFLAGS = -static -g
 TARGET = battlefield
-OBJECTS = Unit.o Player.o Soldier.o Thief.o Mage.o Monster.o Elemental.o Goblin.o Ogre.o UnitFactory.o MagicFactory.o PiercingFactory.o BludgeoningFactory.o Team.o ComputerTeam.o SinglePlayer.o GameMaster.o Map.o main.o
+OBJECTS = Unit.o Player.o Soldier.o Thief.o Mage.o Monster.o Elemental.o Goblin.o Ogre.o UnitFactory.o MagicFactory.o PiercingFactory.o BludgeoningFactory.o Team.o ComputerTeam.o SinglePlayer.o GameMaster.o Map.o DungeonGame.o SinglePlayerGame.o main.o
 
 
 all: $(OBJECTS)
@@ -17,6 +17,7 @@ HumanTeam.o: Team.h Team.cpp
 ComputerTeam.o: Team.h
 SinglePlayer.o: Team.h
 Team.o: Unit.h
+SinglePlayerGame.o: DungeonGame.h SinglePlayerGame.h
 
 %.o: %.cpp
 	$(CC) $< $(CFLAGS) -c -o $@
