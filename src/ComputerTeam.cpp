@@ -1,6 +1,6 @@
 #include <iostream>
 #include <stdlib.h>
-
+#include <algorithm>
 #include <time.h>
 
 #include "ComputerTeam.h"
@@ -31,6 +31,57 @@ void ComputerTeam::turn()
 	int randomDirection;
 	srand(time(NULL));
 	//unit movement
+
+	for (unsigned int x = 0; x < units.size(); x++)
+	{
+
+		Unit * unitToAttack = 0;
+		if (units.at(x) && units.at(x)->getHealth() > 0)
+		{
+			if (gameMaster->locateUnit(gameMaster->locateUnit(units.at(x)).at(0)-1,gameMaster->locateUnit(units.at(x)).at(1)))
+			{
+				if ( find(units.begin(), units.end(),gameMaster->locateUnit(gameMaster->locateUnit(units.at(x)).at(0)-1,gameMaster->locateUnit(units.at(x)).at(1))) == units.end())
+				{
+
+					unitToAttack = gameMaster->locateUnit(gameMaster->locateUnit(units.at(x)).at(0)-1,gameMaster->locateUnit(units.at(x)).at(1));
+					cout << unitToAttack << endl;
+				}
+			}
+			else if (gameMaster->locateUnit(gameMaster->locateUnit(units.at(x)).at(0)+1,gameMaster->locateUnit(units.at(x)).at(1)))
+			{
+				if ( find(units.begin(), units.end(),gameMaster->locateUnit(gameMaster->locateUnit(units.at(x)).at(0)+1,gameMaster->locateUnit(units.at(x)).at(1))) == units.end())
+				{
+
+					unitToAttack = gameMaster->locateUnit(gameMaster->locateUnit(units.at(x)).at(0)+1,gameMaster->locateUnit(units.at(x)).at(1));
+					cout << unitToAttack << endl;
+				}
+			}
+			else if (gameMaster->locateUnit(gameMaster->locateUnit(units.at(x)).at(0),gameMaster->locateUnit(units.at(x)).at(1)-1))
+			{
+				if ( find(units.begin(), units.end(),gameMaster->locateUnit(gameMaster->locateUnit(units.at(x)).at(0),gameMaster->locateUnit(units.at(x)).at(1)-1)) == units.end())
+				{
+
+					unitToAttack = gameMaster->locateUnit(gameMaster->locateUnit(units.at(x)).at(0),gameMaster->locateUnit(units.at(x)).at(1)-1);
+					cout << unitToAttack << endl;
+				}
+			}
+			else if (gameMaster->locateUnit(gameMaster->locateUnit(units.at(x)).at(0)-1,gameMaster->locateUnit(units.at(x)).at(1)+1))
+			{
+				if ( find(units.begin(), units.end(),gameMaster->locateUnit(gameMaster->locateUnit(units.at(x)).at(0),gameMaster->locateUnit(units.at(x)).at(1)+1)) == units.end())
+				{
+					unitToAttack = gameMaster->locateUnit(gameMaster->locateUnit(units.at(x)).at(0),gameMaster->locateUnit(units.at(x)).at(1)+1);
+					cout << unitToAttack << endl;
+				}
+			}
+		}
+
+
+			if (unitToAttack)
+			{
+				cout << "A Computer unit attacks for " << units.at(x)->getDamage() << "!" << endl;
+				gameMaster->attack(units.at(x),unitToAttack);
+			}
+	}
 
 	for (unsigned int x = 0; x < units.size(); x++)
 	{

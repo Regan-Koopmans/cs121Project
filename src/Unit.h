@@ -33,7 +33,7 @@ class Unit
     */
 
     virtual Unit * clone() = 0;
-    
+
     /**
     * @brief Public interface to damage member variable.
     * @return int containing value of damage.
@@ -77,8 +77,7 @@ class Unit
 
     void setClass(string inputClass);
 
-    unsigned int get_x();
-    unsigned int get_y();
+    
 
 protected:
 
@@ -88,8 +87,6 @@ protected:
 
    //Not sure if the below members are still in use.
 
-    unsigned int x;
-    unsigned int y;
 
    friend class Team;
 

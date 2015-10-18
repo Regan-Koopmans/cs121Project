@@ -39,21 +39,10 @@ Unit::~Unit()
 
 Unit::Unit()
 {
-	srand(time(NULL));
-
-	x = rand() % 20;
-	y = rand() % 20;
+	
 }
 
-unsigned int Unit::get_x()
-{
-	return x;
-}
 
-unsigned int Unit::get_y()
-{
-	return y;
-}
 
 void Unit::takeDamage(int inputDamage)
 {
