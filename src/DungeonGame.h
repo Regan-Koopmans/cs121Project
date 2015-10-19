@@ -17,19 +17,14 @@ class DungeonGame
     */
     virtual void setupGame() = 0;
     /**
-    * @brief Standard function for begining games of all concrete games.
+    * @brief Pure virtual function for begining games of all concrete games.
     */
-    void beginGame();
-    /**
-    * @brief virtual destructor, in case child classes use dynamic memory.
+    virtual void beginGame() = 0;
+
+    /*
+    * @brief Virtual destructor
     */
     virtual ~DungeonGame();
-
-  protected:
-    /**
-    * @brief A instance of GameMaster that is the entry point to the rest of the system.
-    */
-    Master gameMaster;
 };
 
 #endif

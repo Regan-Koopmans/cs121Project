@@ -15,3 +15,7 @@ void SinglePlayerGame::setupGame()
   team1->initUnits();
   team2->initUnits();
 }
+void SinglePlayerGame::beginGame()
+{
+	gameMaster.playGame();
+}

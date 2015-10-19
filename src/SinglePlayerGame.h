@@ -15,8 +15,13 @@ public:
   */
   void setupGame();
 
-private:
+   /**
+  * @brief Implementation creating one ComputerTeam and one SinglePlayer team.
+  */
+  void beginGame();
 
+private:
+	Master gameMaster;
 };
 
 #endif
