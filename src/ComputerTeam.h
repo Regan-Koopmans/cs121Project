@@ -6,11 +6,25 @@
 class ComputerTeam : public Team
 {
   public:
-	  
+    /**
+    * @brief
+    */
     ComputerTeam(GameMaster * inputGameMaster);
+    /**
+    * @brief
+    */
     virtual void initUnits();
+    /**
+    * @brief
+    */
     virtual void turn();
+    /**
+    * @brief
+    */
     virtual void update(Team*);
+    /**
+    * @brief
+    */
     virtual void attack();
 
   private:
