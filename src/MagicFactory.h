@@ -16,7 +16,13 @@
 class MagicFactory : public UnitFactory
 {
 public:
+  /**
+	* @brief Concrete implementation of createPlayer, will create a Mage
+	*/
   virtual Unit * createPlayer();
+  /**
+	* @brief Concrete impletation of createMonster, will create an Elemental
+	*/
   virtual Unit * createMonster();
 };
 

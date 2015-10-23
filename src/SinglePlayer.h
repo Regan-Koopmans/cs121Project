@@ -15,10 +15,25 @@ class SinglePlayer : public Team
 {
   public:
 
+    /**
+    * @brief Constructor for class SinglePlayer
+    */
     SinglePlayer(GameMaster * gameMaster);
+    /**
+    * @brief Concrete implementation of initiation of units.
+    */
     void initUnits();
+    /**
+    * @brief Observer function for updating.
+    */
     void update(Team*);
+    /**
+    * @brief Concrete implementation of turn.
+    */
     void attack();
+    /**
+    * @brief Concrete implementation of turn.
+    */
     void turn();
 
   private:

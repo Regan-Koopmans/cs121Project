@@ -14,7 +14,13 @@
 class BludgeoningFactory : public UnitFactory
 {
 public:
+	/**
+	* @brief Concrete implementation of createPlayer, will create a Soldier
+	*/
 	virtual Unit* createPlayer();
+	/**
+	* @brief Concrete impletation of createMonster, will create an Ogre
+	*/
 	virtual Unit* createMonster();
 };
 

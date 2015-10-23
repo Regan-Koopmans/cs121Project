@@ -12,17 +12,57 @@
 class Master : public GameMaster
 {
   public:
+    /**
+    * @brief Constructor for class Master.
+    */
   	Master();
+    /**
+    * @brief Destructor for class Master.
+    */
   	~Master();
+    /**
+    * @brief
+    */
     virtual void attachTeam(Team * inputTeam);
+    /**
+    * @brief
+    */
     virtual void detachTeam(Team * inputTeam);
-	virtual bool moveUnit(Unit * inputUnit, string direction);
+    /**
+    * @brief A simplifie
+    * @return boolean stating whether movement was correct.
+    */
+    virtual bool moveUnit(Unit * inputUnit, string direction);
+    /**
+    * @brief Observer function to indicate to Observers to update.
+    */
     virtual void notify(Team*);
-	virtual void printMap();
-	virtual void addToMap(Unit * inputUnit,int x, int y);
+    /**
+    * @brief Function that invokes the print of map.
+    */
+	  virtual void printMap();
+    /**
+    * @brief Adds Unit pointer to given x-y coordinates
+    */
+    virtual void addToMap(Unit * inputUnit,int x, int y);
+    /**
+    * @brief Will search map for Unit pointer at given coordinates.
+    * @return vector containing coordinates of given Unit pointer. Will
+    */
     virtual vector<int> locateUnit(Unit * inputUnit);
-	virtual vector<int> requestFreeSpace();
-	virtual Unit* locateUnit(int row, int col);
+    /**
+    * @brief Finds an empty space on a map for the purpose
+    * @return vector containing empty coordinates on the map.
+    */
+    virtual vector<int> requestFreeSpace();
+    /**
+    * @brief Retrieves Unit at given coordinates.
+    * @return Unit* at a given row and column coordinate.
+    */
+    virtual Unit* locateUnit(int row, int col);
+    /**
+    * @brief Function to ensure
+    */
     virtual void removeDestroyedUnits();
  private:
     Map* map;

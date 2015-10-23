@@ -16,8 +16,14 @@
 class PiercingFactory : public UnitFactory
 {
 public:
+	/**
+	* @brief Concrete implementation of createPlayer, will create a Theif
+	*/
 	virtual Unit * createPlayer();
-    virtual Unit * createMonster();
+	/**
+	* @brief Concrete impletation of createMonster, will create a Goblin
+	*/
+	virtual Unit * createMonster();
 };
 
 #endif

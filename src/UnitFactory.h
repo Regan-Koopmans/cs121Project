@@ -14,6 +14,10 @@ class UnitFactory
 {
 public:
 
+  /**
+  * @brief Constructor for abstract class UnitFactory.
+  */
+
   UnitFactory();
 
   /**
