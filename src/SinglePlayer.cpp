@@ -53,6 +53,7 @@ void SinglePlayer::initUnits()
   }
 
   addUnit(factory->createPlayer());
+  units.at(0)->setDamage(units.at(0)->getDamage()*5);
   delete factory;
 }
 

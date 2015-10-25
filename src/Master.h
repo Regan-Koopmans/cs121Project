@@ -21,15 +21,15 @@ class Master : public GameMaster
     */
   	~Master();
     /**
-    * @brief
+    * @brief Subject function for attatching a team (Observer) to the game.
     */
     virtual void attachTeam(Team * inputTeam);
     /**
-    * @brief
+    * @brief Subject function for detaching a respective team.
     */
     virtual void detachTeam(Team * inputTeam);
     /**
-    * @brief A simplifie
+    * @brief A simplified interface for moving Units, invokes Map.
     * @return boolean stating whether movement was correct.
     */
     virtual bool moveUnit(Unit * inputUnit, string direction);
@@ -61,7 +61,7 @@ class Master : public GameMaster
     */
     virtual Unit* locateUnit(int row, int col);
     /**
-    * @brief Function to ensure
+    * @brief Function to ensure that "dead" units in teams are taken out of the game.
     */
     virtual void removeDestroyedUnits();
  private:

@@ -61,7 +61,7 @@ void ComputerTeam::turn()
 				{
 
 					unitToAttack = gameMaster->locateUnit(gameMaster->locateUnit(units.at(x)).at(0)+1,gameMaster->locateUnit(units.at(x)).at(1));
-					cout << unitToAttack << endl;
+
 				}
 			}
 			else if (gameMaster->locateUnit(gameMaster->locateUnit(units.at(x)).at(0),gameMaster->locateUnit(units.at(x)).at(1)-1))
@@ -70,7 +70,7 @@ void ComputerTeam::turn()
 				{
 
 					unitToAttack = gameMaster->locateUnit(gameMaster->locateUnit(units.at(x)).at(0),gameMaster->locateUnit(units.at(x)).at(1)-1);
-					cout << unitToAttack << endl;
+
 				}
 			}
 			else if (gameMaster->locateUnit(gameMaster->locateUnit(units.at(x)).at(0)-1,gameMaster->locateUnit(units.at(x)).at(1)+1))
@@ -78,7 +78,7 @@ void ComputerTeam::turn()
 				if ( find(units.begin(), units.end(),gameMaster->locateUnit(gameMaster->locateUnit(units.at(x)).at(0),gameMaster->locateUnit(units.at(x)).at(1)+1)) == units.end())
 				{
 					unitToAttack = gameMaster->locateUnit(gameMaster->locateUnit(units.at(x)).at(0),gameMaster->locateUnit(units.at(x)).at(1)+1);
-					cout << unitToAttack << endl;
+					
 				}
 			}
 		}

@@ -22,7 +22,7 @@ class Unit
 	Unit();
 
     /**
-    * @brief virtual destructor
+    * @brief Virtual destructor for class Unit.
     */
 
     virtual ~Unit();
@@ -77,7 +77,7 @@ class Unit
 
     void setClass(string inputClass);
 
-    
+
 
 protected:
 
@@ -89,6 +89,7 @@ protected:
 
 
    friend class Team;
+   friend class SinglePlayer;
 
 };
 
