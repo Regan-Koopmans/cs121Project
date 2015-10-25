@@ -29,3 +29,6 @@ clean:
 
 run:
 	./$(TARGET)
+
+map:
+	./MapGenerator

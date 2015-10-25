@@ -26,6 +26,14 @@ void ComputerTeam::attack()
 
 void ComputerTeam::turn()
 {
+	bool alive = false;
+	for (unsigned int x = 0; x < units.size(); x++)
+	{
+		if (units.at(x)->getHealth() > 0)
+			alive = true;
+	}
+	if (alive)
+	{
 	cout << "It is now the Computer's turn " << endl;
 
 	int randomDirection;
@@ -44,7 +52,7 @@ void ComputerTeam::turn()
 				{
 
 					unitToAttack = gameMaster->locateUnit(gameMaster->locateUnit(units.at(x)).at(0)-1,gameMaster->locateUnit(units.at(x)).at(1));
-					cout << unitToAttack << endl;
+
 				}
 			}
 			else if (gameMaster->locateUnit(gameMaster->locateUnit(units.at(x)).at(0)+1,gameMaster->locateUnit(units.at(x)).at(1)))
@@ -81,7 +89,9 @@ void ComputerTeam::turn()
 				cout << "A Computer unit attacks for " << units.at(x)->getDamage() << "!" << endl;
 				gameMaster->attack(units.at(x),unitToAttack);
 			}
-	}
+		}
+
+
 
 	for (unsigned int x = 0; x < units.size(); x++)
 	{
@@ -100,6 +110,13 @@ void ComputerTeam::turn()
 		}
 	}
 	gameMaster->notify(this);
+}
+	else
+	{
+		cout << "All enemies defeated." << endl;
+		cout << "You won!" << endl;
+		exit(0);
+	}
 }
 
 ComputerTeam::ComputerTeam(GameMaster * inputGameMaster) : Team(inputGameMaster)

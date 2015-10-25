@@ -152,13 +152,15 @@ void SinglePlayer::attack()
 }
 void SinglePlayer::turn()
 {
+  if (units.at(0)->getHealth() > 0)
+  {
   cout << "It is now Player 1's turn " << endl;
   string inputString;
 
   cout << "\nWhat would you like to do? ";
   cin >> inputString;
 
- 
+
   if (inputString == "north" || inputString == "n" )
 
   if (inputString == "north" || inputString == "n")
@@ -182,4 +184,7 @@ void SinglePlayer::turn()
     exit(0);
   }
   gameMaster->notify(this);
+  }
+  cout << "You have died. GAME OVER!" << endl;
+  exit(0);
 }
