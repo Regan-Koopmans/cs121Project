@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['clone',['clone',['../class_monster.html#a1ee9cabba47d15d4e196d19561250ee0',1,'Monster::clone()'],['../class_player.html#ad690ac4f9f851298abeb0955321ea29e',1,'Player::clone()'],['../class_unit.html#add809c0669cb6b08afae913da60c4cc1',1,'Unit::clone()']]]
+  ['begingame',['beginGame',['../class_dungeon_game.html#a76811f2d4100bab2feaa389ea9c385e2',1,'DungeonGame::beginGame()'],['../class_single_player_game.html#af8a5aed5f4884a1ecca574d972248906',1,'SinglePlayerGame::beginGame()']]],
+  ['bludgeoningfactory',['BludgeoningFactory',['../class_bludgeoning_factory.html',1,'']]]
 ];

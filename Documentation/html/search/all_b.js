@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7eunit',['~Unit',['../class_unit.html#a6353fc4c0a329997ad4abcf0dcb4eb27',1,'Unit']]]
+  ['ogre',['Ogre',['../class_ogre.html',1,'Ogre'],['../class_ogre.html#aeb7c78cfd86de3a8e2175d87dac17c9f',1,'Ogre::Ogre()']]]
 ];

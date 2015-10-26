@@ -1,9 +1,11 @@
 #ifndef MAP_H
 #define MAP_H
+
 /**
- *@class An aggregation of chars representing a map, on which the game occurs.
+ *@class Map
  *@brief Enables the concepts of position and movement.
  */
+ 
 class Map
 {
 private:

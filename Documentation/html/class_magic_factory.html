@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Test: MagicFactory Class Reference</title>
+<title>COS 121 Project: MagicFactory Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,9 +23,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Test
+   <div id="projectname">COS 121 Project
    </div>
-   <div id="projectbrief">a project for something</div>
   </td>
  </tr>
  </tbody>
@@ -39,7 +38,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -92,6 +90,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p>Concrete Factory that creates a <a class="el" href="class_mage.html" title="A concrete Unit; Inherits from Player. ">Mage</a> or <a class="el" href="class_elemental.html" title="A concrete Unit; Inherits from Monster. ">Elemental</a> object.  
+ <a href="class_magic_factory.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_magic_factory_8h_source.html">MagicFactory.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for MagicFactory:</div>
@@ -99,30 +100,46 @@ Inheritance diagram for MagicFactory:</div>
  <div class="center">
   <img src="class_magic_factory.png" usemap="#MagicFactory_map" alt=""/>
   <map id="MagicFactory_map" name="MagicFactory_map">
-<area href="class_unit_factory.html" alt="UnitFactory" shape="rect" coords="0,0,91,24"/>
+<area href="class_unit_factory.html" title="Defines an interface for creating type Player and type Monster. " alt="UnitFactory" shape="rect" coords="0,0,91,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2f1ef4ca86f4856a2fcc77bfe4b4a19e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2f1ef4ca86f4856a2fcc77bfe4b4a19e"></a>
-<a class="el" href="class_unit.html">Unit</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>makeLight</b> ()</td></tr>
-<tr class="separator:a2f1ef4ca86f4856a2fcc77bfe4b4a19e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeff3d4611a7da2251a18038da21b5b2c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeff3d4611a7da2251a18038da21b5b2c"></a>
-<a class="el" href="class_unit.html">Unit</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>makeDark</b> ()</td></tr>
-<tr class="separator:aeff3d4611a7da2251a18038da21b5b2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3021b979bd991e32e311c8869d500b46"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3021b979bd991e32e311c8869d500b46"></a>
+virtual <a class="el" href="class_unit.html">Unit</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_magic_factory.html#a3021b979bd991e32e311c8869d500b46">createPlayer</a> ()</td></tr>
+<tr class="memdesc:a3021b979bd991e32e311c8869d500b46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete implementation of createPlayer, will create a <a class="el" href="class_mage.html" title="A concrete Unit; Inherits from Player. ">Mage</a>. <br /></td></tr>
+<tr class="separator:a3021b979bd991e32e311c8869d500b46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaef72871585cca14e5b847fc44ce3c2b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaef72871585cca14e5b847fc44ce3c2b"></a>
+virtual <a class="el" href="class_unit.html">Unit</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_magic_factory.html#aaef72871585cca14e5b847fc44ce3c2b">createMonster</a> ()</td></tr>
+<tr class="memdesc:aaef72871585cca14e5b847fc44ce3c2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete impletation of createMonster, will create an <a class="el" href="class_elemental.html" title="A concrete Unit; Inherits from Monster. ">Elemental</a>. <br /></td></tr>
+<tr class="separator:aaef72871585cca14e5b847fc44ce3c2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_unit_factory"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_unit_factory')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_unit_factory.html">UnitFactory</a></td></tr>
-<tr class="memitem:a321efab812a837b52f303fc737048c30 inherit pub_methods_class_unit_factory"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a321efab812a837b52f303fc737048c30"></a>
-<a class="el" href="class_unit.html">Unit</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>makeLight</b> ()</td></tr>
-<tr class="separator:a321efab812a837b52f303fc737048c30 inherit pub_methods_class_unit_factory"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2f1d6eebffefbafa173b79fe38beb49 inherit pub_methods_class_unit_factory"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa2f1d6eebffefbafa173b79fe38beb49"></a>
-<a class="el" href="class_unit.html">Unit</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>makeDark</b> ()</td></tr>
-<tr class="separator:aa2f1d6eebffefbafa173b79fe38beb49 inherit pub_methods_class_unit_factory"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80d72d19128bfb2adb7580405bf058af inherit pub_methods_class_unit_factory"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a80d72d19128bfb2adb7580405bf058af"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unit_factory.html#a80d72d19128bfb2adb7580405bf058af">UnitFactory</a> ()</td></tr>
+<tr class="memdesc:a80d72d19128bfb2adb7580405bf058af inherit pub_methods_class_unit_factory"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for abstract class <a class="el" href="class_unit_factory.html" title="Defines an interface for creating type Player and type Monster. ">UnitFactory</a>. <br /></td></tr>
+<tr class="separator:a80d72d19128bfb2adb7580405bf058af inherit pub_methods_class_unit_factory"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a711fba8252a25f2c3b146c48467de0f4 inherit pub_methods_class_unit_factory"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a711fba8252a25f2c3b146c48467de0f4"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unit_factory.html#a711fba8252a25f2c3b146c48467de0f4">~UnitFactory</a> ()</td></tr>
+<tr class="memdesc:a711fba8252a25f2c3b146c48467de0f4 inherit pub_methods_class_unit_factory"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor for class <a class="el" href="class_unit.html" title="Is the class from which all concrete Units derive. ">Unit</a>. <br /></td></tr>
+<tr class="separator:a711fba8252a25f2c3b146c48467de0f4 inherit pub_methods_class_unit_factory"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_attribs_class_unit_factory"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_unit_factory')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_unit_factory.html">UnitFactory</a></td></tr>
+<tr class="memitem:afe9836096c4bb82810b34853274b28fd inherit pro_attribs_class_unit_factory"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afe9836096c4bb82810b34853274b28fd"></a>
+<a class="el" href="class_unit.html">Unit</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>modelMonster</b></td></tr>
+<tr class="separator:afe9836096c4bb82810b34853274b28fd inherit pro_attribs_class_unit_factory"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80786fa16035fcdfa88762a8fc04f751 inherit pro_attribs_class_unit_factory"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a80786fa16035fcdfa88762a8fc04f751"></a>
+<a class="el" href="class_unit.html">Unit</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>modelPlayer</b></td></tr>
+<tr class="separator:a80786fa16035fcdfa88762a8fc04f751 inherit pro_attribs_class_unit_factory"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>DOXYGEN COMMENT HERE. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<div class="textblock"><p>Concrete Factory that creates a <a class="el" href="class_mage.html" title="A concrete Unit; Inherits from Player. ">Mage</a> or <a class="el" href="class_elemental.html" title="A concrete Unit; Inherits from Monster. ">Elemental</a> object. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_unit_factory.html" title="Defines an interface for creating type Player and type Monster. ">UnitFactory</a> </dd></dl>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_magic_factory_8h_source.html">MagicFactory.h</a></li>
+<li>MagicFactory.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

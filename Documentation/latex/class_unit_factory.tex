@@ -1,8 +1,13 @@
-\section{Unit\+Factory Class Reference}
+\hypertarget{class_unit_factory}{}\section{Unit\+Factory Class Reference}
 \label{class_unit_factory}\index{Unit\+Factory@{Unit\+Factory}}
 
 
-{\ttfamily \#include $<$Bludgeoning\+Factory.\+h$>$}
+Defines an interface for creating type \hyperlink{class_player}{Player} and type \hyperlink{class_monster}{Monster}.  
+
+
+
+
+{\ttfamily \#include $<$Unit\+Factory.\+h$>$}
 
 Inheritance diagram for Unit\+Factory\+:\begin{figure}[H]
 \begin{center}
@@ -13,24 +18,70 @@ Inheritance diagram for Unit\+Factory\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\bf Unit} $\ast$ {\bfseries make\+Light} ()\label{class_unit_factory_a321efab812a837b52f303fc737048c30}
+\hypertarget{class_unit_factory_a80d72d19128bfb2adb7580405bf058af}{}\hyperlink{class_unit_factory_a80d72d19128bfb2adb7580405bf058af}{Unit\+Factory} ()\label{class_unit_factory_a80d72d19128bfb2adb7580405bf058af}
+
+\begin{DoxyCompactList}\small\item\em Constructor for abstract class \hyperlink{class_unit_factory}{Unit\+Factory}. \end{DoxyCompactList}\item 
+\hypertarget{class_unit_factory_a711fba8252a25f2c3b146c48467de0f4}{}virtual \hyperlink{class_unit_factory_a711fba8252a25f2c3b146c48467de0f4}{$\sim$\+Unit\+Factory} ()\label{class_unit_factory_a711fba8252a25f2c3b146c48467de0f4}
+
+\begin{DoxyCompactList}\small\item\em Virtual destructor for class \hyperlink{class_unit}{Unit}. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_unit}{Unit} $\ast$ \hyperlink{class_unit_factory_ad0c4ed547dcb38f6176a660850d405c6}{create\+Player} ()=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function for creating Players. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_unit}{Unit} $\ast$ \hyperlink{class_unit_factory_a5c34317957c2500e571dae72bcb0ef3e}{create\+Monster} ()=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function for creating Mosters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_unit_factory_afe9836096c4bb82810b34853274b28fd}{}\hyperlink{class_unit}{Unit} $\ast$ {\bfseries model\+Monster}\label{class_unit_factory_afe9836096c4bb82810b34853274b28fd}
 
 \item 
-{\bf Unit} $\ast$ {\bfseries make\+Dark} ()\label{class_unit_factory_aa2f1d6eebffefbafa173b79fe38beb49}
-
-\item 
-virtual {\bf Unit} $\ast$ {\bfseries make\+Light} ()=0\label{class_unit_factory_a8857f9a5156d856c01dd95b58ff4133d}
-
-\item 
-virtual {\bf Unit} $\ast$ {\bfseries make\+Dark} ()=0\label{class_unit_factory_a14e80f213953ac2c4d58ea5d287762c4}
+\hypertarget{class_unit_factory_a80786fa16035fcdfa88762a8fc04f751}{}\hyperlink{class_unit}{Unit} $\ast$ {\bfseries model\+Player}\label{class_unit_factory_a80786fa16035fcdfa88762a8fc04f751}
 
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-D\+O\+X\+Y\+G\+E\+N C\+O\+M\+M\+E\+N\+T H\+E\+R\+E. 
+Defines an interface for creating type \hyperlink{class_player}{Player} and type \hyperlink{class_monster}{Monster}. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_unit_factory_a5c34317957c2500e571dae72bcb0ef3e}{}\index{Unit\+Factory@{Unit\+Factory}!create\+Monster@{create\+Monster}}
+\index{create\+Monster@{create\+Monster}!Unit\+Factory@{Unit\+Factory}}
+\subsubsection[{create\+Monster()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Unit}$\ast$ Unit\+Factory\+::create\+Monster (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_unit_factory_a5c34317957c2500e571dae72bcb0ef3e}
+
+
+Pure virtual function for creating Mosters. 
+
+\begin{DoxyReturn}{Returns}
+Unit$\ast$ of type concrete Monsters 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_magic_factory_aaef72871585cca14e5b847fc44ce3c2b}{Magic\+Factory}, \hyperlink{class_piercing_factory_a042235a24b114b8b66e3e7733109e504}{Piercing\+Factory}, and \hyperlink{class_bludgeoning_factory_aac731068b267c290aa7d0b3968cf7d1d}{Bludgeoning\+Factory}.
+
+\hypertarget{class_unit_factory_ad0c4ed547dcb38f6176a660850d405c6}{}\index{Unit\+Factory@{Unit\+Factory}!create\+Player@{create\+Player}}
+\index{create\+Player@{create\+Player}!Unit\+Factory@{Unit\+Factory}}
+\subsubsection[{create\+Player()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Unit}$\ast$ Unit\+Factory\+::create\+Player (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_unit_factory_ad0c4ed547dcb38f6176a660850d405c6}
+
+
+Pure virtual function for creating Players. 
+
+\begin{DoxyReturn}{Returns}
+Unit$\ast$ of type concrete \hyperlink{class_player}{Player} 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_magic_factory_a3021b979bd991e32e311c8869d500b46}{Magic\+Factory}, \hyperlink{class_piercing_factory_a3a2f3736e85a5c4b0ad0160b1b34d796}{Piercing\+Factory}, and \hyperlink{class_bludgeoning_factory_adb269785fcab1a468aabe771cf4f4336}{Bludgeoning\+Factory}.
+
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Bludgeoning\+Factory.\+h\item 
-Unit\+Factory.\+h\end{DoxyCompactItemize}
+Unit\+Factory.\+h\item 
+Unit\+Factory.\+cpp\end{DoxyCompactItemize}

@@ -11,7 +11,7 @@ class Team;
 using namespace std;
 /**
 * @class GameMaster
-* @brief A
+* @brief An abstract class defining a general manager for a game.
 */
 class GameMaster
 {

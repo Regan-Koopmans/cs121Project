@@ -1,4 +1,10 @@
 var searchData=
 [
-  ['thief',['Thief',['../class_thief.html',1,'Thief'],['../class_thief.html#aa27752dd9c628bf41d297fedee59c2df',1,'Thief::Thief()']]]
+  ['mage',['Mage',['../class_mage.html',1,'Mage'],['../class_mage.html#a9d7d4455a6fa1f8e35117e0dc301d082',1,'Mage::Mage()']]],
+  ['magicfactory',['MagicFactory',['../class_magic_factory.html',1,'']]],
+  ['map',['Map',['../class_map.html',1,'Map'],['../class_map.html#ac799bd535a5174700b11ebf7fa2c62e4',1,'Map::Map()']]],
+  ['master',['Master',['../class_master.html',1,'Master'],['../class_master.html#ab917c3763c181ccad46ac6da8843c6e9',1,'Master::Master()']]],
+  ['monster',['Monster',['../class_monster.html',1,'']]],
+  ['move',['Move',['../class_map.html#af5d2cdc79ed8fb0ea8c9b8eb649a1046',1,'Map']]],
+  ['moveunit',['moveUnit',['../class_master.html#aed3a45ecf7482d60e4738701486f011c',1,'Master']]]
 ];

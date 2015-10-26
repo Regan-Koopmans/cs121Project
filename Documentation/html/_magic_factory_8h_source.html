@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Test: MagicFactory.h Source File</title>
+<title>COS 121 Project: MagicFactory.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,9 +23,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Test
+   <div id="projectname">COS 121 Project
    </div>
-   <div id="projectbrief">a project for something</div>
   </td>
  </tr>
  </tbody>
@@ -39,7 +38,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -89,18 +87,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define MAGIC_FACTORY_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;UnitFactory.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_magic_factory.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_magic_factory.html">MagicFactory</a> : <span class="keyword">public</span> <a class="code" href="class_unit_factory.html">UnitFactory</a></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <a class="code" href="class_unit.html">Unit</a> * makeLight();</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <a class="code" href="class_unit.html">Unit</a> * makeDark();</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;};</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="class_unit_factory_html"><div class="ttname"><a href="class_unit_factory.html">UnitFactory</a></div><div class="ttdef"><b>Definition:</b> BludgeoningFactory.h:12</div></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;Elemental.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;Mage.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_magic_factory.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_magic_factory.html">MagicFactory</a> : <span class="keyword">public</span> <a class="code" href="class_unit_factory.html">UnitFactory</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="class_unit.html">Unit</a> * <a class="code" href="class_magic_factory.html#a3021b979bd991e32e311c8869d500b46">createPlayer</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="class_unit.html">Unit</a> * <a class="code" href="class_magic_factory.html#aaef72871585cca14e5b847fc44ce3c2b">createMonster</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;};</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_unit_factory_html"><div class="ttname"><a href="class_unit_factory.html">UnitFactory</a></div><div class="ttdoc">Defines an interface for creating type Player and type Monster. </div><div class="ttdef"><b>Definition:</b> UnitFactory.h:11</div></div>
+<div class="ttc" id="class_magic_factory_html_a3021b979bd991e32e311c8869d500b46"><div class="ttname"><a href="class_magic_factory.html#a3021b979bd991e32e311c8869d500b46">MagicFactory::createPlayer</a></div><div class="ttdeci">virtual Unit * createPlayer()</div><div class="ttdoc">Concrete implementation of createPlayer, will create a Mage. </div><div class="ttdef"><b>Definition:</b> MagicFactory.cpp:3</div></div>
+<div class="ttc" id="class_magic_factory_html_aaef72871585cca14e5b847fc44ce3c2b"><div class="ttname"><a href="class_magic_factory.html#aaef72871585cca14e5b847fc44ce3c2b">MagicFactory::createMonster</a></div><div class="ttdeci">virtual Unit * createMonster()</div><div class="ttdoc">Concrete impletation of createMonster, will create an Elemental. </div><div class="ttdef"><b>Definition:</b> MagicFactory.cpp:15</div></div>
 <div class="ttc" id="class_unit_html"><div class="ttname"><a href="class_unit.html">Unit</a></div><div class="ttdoc">Is the class from which all concrete Units derive. </div><div class="ttdef"><b>Definition:</b> Unit.h:18</div></div>
-<div class="ttc" id="class_magic_factory_html"><div class="ttname"><a href="class_magic_factory.html">MagicFactory</a></div><div class="ttdef"><b>Definition:</b> MagicFactory.h:12</div></div>
+<div class="ttc" id="class_magic_factory_html"><div class="ttname"><a href="class_magic_factory.html">MagicFactory</a></div><div class="ttdoc">Concrete Factory that creates a Mage or Elemental object. </div><div class="ttdef"><b>Definition:</b> MagicFactory.h:16</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

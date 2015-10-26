@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['getclass',['getClass',['../class_unit.html#a4c4dde0419950aa3b44302bbff2af810',1,'Unit']]],
-  ['getdamage',['getDamage',['../class_unit.html#a7b0dbed96660669a2234b715018781fa',1,'Unit']]],
-  ['gethealth',['getHealth',['../class_unit.html#a610a98a68a3e99227b15af4161f26b70',1,'Unit']]],
-  ['goblin',['Goblin',['../class_goblin.html#a22d43a81f99697e13d13a0c56fae9bc4',1,'Goblin']]]
+  ['detachteam',['detachTeam',['../class_game_master.html#a638ef26b4c968ba97114ffbbe55810c8',1,'GameMaster::detachTeam()'],['../class_master.html#a876e27a128fd3ce416e06f87097df2ae',1,'Master::detachTeam()']]]
 ];

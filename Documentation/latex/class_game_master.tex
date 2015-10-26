@@ -1,0 +1,86 @@
+\hypertarget{class_game_master}{}\section{Game\+Master Class Reference}
+\label{class_game_master}\index{Game\+Master@{Game\+Master}}
+
+
+An abstract class defining a general manager for a game.  
+
+
+
+
+{\ttfamily \#include $<$Game\+Master.\+h$>$}
+
+Inheritance diagram for Game\+Master\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game_master}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_game_master_af68133fd8969aa4ed20ad3009ad8cdb2}{}\hyperlink{class_game_master_af68133fd8969aa4ed20ad3009ad8cdb2}{Game\+Master} ()\label{class_game_master_af68133fd8969aa4ed20ad3009ad8cdb2}
+
+\begin{DoxyCompactList}\small\item\em Constructor for class \hyperlink{class_game_master}{Game\+Master}. \end{DoxyCompactList}\item 
+\hypertarget{class_game_master_aad28afc3763a1bfaf95503dc3a4ca7c0}{}virtual void \hyperlink{class_game_master_aad28afc3763a1bfaf95503dc3a4ca7c0}{attach\+Team} (\hyperlink{class_team}{Team} $\ast$input\+Team)=0\label{class_game_master_aad28afc3763a1bfaf95503dc3a4ca7c0}
+
+\begin{DoxyCompactList}\small\item\em Virtual destructor for class \hyperlink{class_unit}{Unit}. \end{DoxyCompactList}\item 
+\hypertarget{class_game_master_a638ef26b4c968ba97114ffbbe55810c8}{}virtual void \hyperlink{class_game_master_a638ef26b4c968ba97114ffbbe55810c8}{detach\+Team} (\hyperlink{class_team}{Team} $\ast$input\+Team)=0\label{class_game_master_a638ef26b4c968ba97114ffbbe55810c8}
+
+\begin{DoxyCompactList}\small\item\em Virtual destructor for class \hyperlink{class_unit}{Unit}. \end{DoxyCompactList}\item 
+\hypertarget{class_game_master_abe6538e1a4218fcf011b6e21d50bdc5c}{}void {\bfseries play\+Game} ()\label{class_game_master_abe6538e1a4218fcf011b6e21d50bdc5c}
+
+\item 
+\hypertarget{class_game_master_a8db72937ffc179ea99040949c3e00723}{}virtual bool {\bfseries move\+Unit} (\hyperlink{class_unit}{Unit} $\ast$input\+Unit, string direction)=0\label{class_game_master_a8db72937ffc179ea99040949c3e00723}
+
+\item 
+\hypertarget{class_game_master_ae6e5d34d5e4caa76d32be6f89bf9372e}{}virtual void {\bfseries notify} (\hyperlink{class_team}{Team} $\ast$)=0\label{class_game_master_ae6e5d34d5e4caa76d32be6f89bf9372e}
+
+\item 
+\hypertarget{class_game_master_a239b8bfa602f34cfcf1a3b69342113eb}{}void {\bfseries attack} (\hyperlink{class_unit}{Unit} $\ast$attacking\+Unit, \hyperlink{class_unit}{Unit} $\ast$defending\+Unit)\label{class_game_master_a239b8bfa602f34cfcf1a3b69342113eb}
+
+\item 
+\hypertarget{class_game_master_a848a9cad15b3eaa3140de9e6e1eb814f}{}int {\bfseries get\+Number\+Teams} ()\label{class_game_master_a848a9cad15b3eaa3140de9e6e1eb814f}
+
+\item 
+\hypertarget{class_game_master_aba8dd56864ebdfd1f9648603b09dd4fc}{}\hyperlink{class_team}{Team} $\ast$ {\bfseries get\+Team\+At} (int index)\label{class_game_master_aba8dd56864ebdfd1f9648603b09dd4fc}
+
+\item 
+\hypertarget{class_game_master_a6f3ab165ceb26a36882e143bc812fa65}{}virtual void \hyperlink{class_game_master_a6f3ab165ceb26a36882e143bc812fa65}{print\+Map} ()=0\label{class_game_master_a6f3ab165ceb26a36882e143bc812fa65}
+
+\begin{DoxyCompactList}\small\item\em Virtual destructor for class \hyperlink{class_unit}{Unit}. \end{DoxyCompactList}\item 
+\hypertarget{class_game_master_ace106701f0de9e40c4afb5560a195c5a}{}bool {\bfseries game\+Over} ()\label{class_game_master_ace106701f0de9e40c4afb5560a195c5a}
+
+\item 
+\hypertarget{class_game_master_adfe69afcac63471423e0cbf1a2cabbef}{}virtual void {\bfseries add\+To\+Map} (\hyperlink{class_unit}{Unit} $\ast$input\+Unit, int x, int y)=0\label{class_game_master_adfe69afcac63471423e0cbf1a2cabbef}
+
+\item 
+\hypertarget{class_game_master_a023467341bb0685667cb3e907dcb0324}{}virtual vector$<$ int $>$ {\bfseries locate\+Unit} (\hyperlink{class_unit}{Unit} $\ast$input\+Unit)=0\label{class_game_master_a023467341bb0685667cb3e907dcb0324}
+
+\item 
+\hypertarget{class_game_master_ae759209b7eaa2fc9612b510ad6e40c3c}{}virtual \hyperlink{class_unit}{Unit} $\ast$ {\bfseries locate\+Unit} (int row, int col)=0\label{class_game_master_ae759209b7eaa2fc9612b510ad6e40c3c}
+
+\item 
+\hypertarget{class_game_master_a58aea57e4aac40805bbd71d19e8da2ac}{}virtual vector$<$ int $>$ \hyperlink{class_game_master_a58aea57e4aac40805bbd71d19e8da2ac}{request\+Free\+Space} ()=0\label{class_game_master_a58aea57e4aac40805bbd71d19e8da2ac}
+
+\begin{DoxyCompactList}\small\item\em Pure. \end{DoxyCompactList}\item 
+\hypertarget{class_game_master_a324bec472bdb5e313e7b70d451b9eeae}{}virtual void \hyperlink{class_game_master_a324bec472bdb5e313e7b70d451b9eeae}{remove\+Destroyed\+Units} ()=0\label{class_game_master_a324bec472bdb5e313e7b70d451b9eeae}
+
+\begin{DoxyCompactList}\small\item\em Pure virtual function for removing destroyed Units. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_game_master_a7d6b8e0cace15fe5ad6eb0e2719b1f46}{}vector$<$ \hyperlink{class_team}{Team} $\ast$ $>$ {\bfseries teams}\label{class_game_master_a7d6b8e0cace15fe5ad6eb0e2719b1f46}
+
+\item 
+\hypertarget{class_game_master_aaf9704a5ebe858e028eac9dbb7e1325b}{}unsigned int {\bfseries current\+Turn}\label{class_game_master_aaf9704a5ebe858e028eac9dbb7e1325b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An abstract class defining a general manager for a game. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Game\+Master.\+h\item 
+Game\+Master.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,139 @@
+\hypertarget{class_master}{}\section{Master Class Reference}
+\label{class_master}\index{Master@{Master}}
+
+
+Controls the flow of operations in the simulation.  
+
+
+
+
+{\ttfamily \#include $<$Master.\+h$>$}
+
+Inheritance diagram for Master\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_master}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_master_ab917c3763c181ccad46ac6da8843c6e9}{}\hyperlink{class_master_ab917c3763c181ccad46ac6da8843c6e9}{Master} ()\label{class_master_ab917c3763c181ccad46ac6da8843c6e9}
+
+\begin{DoxyCompactList}\small\item\em Constructor for class \hyperlink{class_master}{Master}. \end{DoxyCompactList}\item 
+\hypertarget{class_master_a20f70958ed75532ba672af1b780f59eb}{}\hyperlink{class_master_a20f70958ed75532ba672af1b780f59eb}{$\sim$\+Master} ()\label{class_master_a20f70958ed75532ba672af1b780f59eb}
+
+\begin{DoxyCompactList}\small\item\em Destructor for class \hyperlink{class_master}{Master}. \end{DoxyCompactList}\item 
+\hypertarget{class_master_a8cdf84a9445b6e847d43c3c57fa2a8d2}{}virtual void \hyperlink{class_master_a8cdf84a9445b6e847d43c3c57fa2a8d2}{attach\+Team} (\hyperlink{class_team}{Team} $\ast$input\+Team)\label{class_master_a8cdf84a9445b6e847d43c3c57fa2a8d2}
+
+\begin{DoxyCompactList}\small\item\em Subject function for attatching a team (Observer) to the game. \end{DoxyCompactList}\item 
+\hypertarget{class_master_a876e27a128fd3ce416e06f87097df2ae}{}virtual void \hyperlink{class_master_a876e27a128fd3ce416e06f87097df2ae}{detach\+Team} (\hyperlink{class_team}{Team} $\ast$input\+Team)\label{class_master_a876e27a128fd3ce416e06f87097df2ae}
+
+\begin{DoxyCompactList}\small\item\em Subject function for detaching a respective team. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_master_aed3a45ecf7482d60e4738701486f011c}{move\+Unit} (\hyperlink{class_unit}{Unit} $\ast$input\+Unit, string direction)
+\begin{DoxyCompactList}\small\item\em A simplified interface for moving Units, invokes \hyperlink{class_map}{Map}. \end{DoxyCompactList}\item 
+\hypertarget{class_master_aa22e3edd94d966011e1874a2bce1d664}{}virtual void \hyperlink{class_master_aa22e3edd94d966011e1874a2bce1d664}{notify} (\hyperlink{class_team}{Team} $\ast$)\label{class_master_aa22e3edd94d966011e1874a2bce1d664}
+
+\begin{DoxyCompactList}\small\item\em Observer function to indicate to Observers to update. \end{DoxyCompactList}\item 
+\hypertarget{class_master_a4382148153bc6297fa62d43380a518c0}{}virtual void \hyperlink{class_master_a4382148153bc6297fa62d43380a518c0}{print\+Map} ()\label{class_master_a4382148153bc6297fa62d43380a518c0}
+
+\begin{DoxyCompactList}\small\item\em Function that invokes the print of map. \end{DoxyCompactList}\item 
+\hypertarget{class_master_aea6e7956d8e9dcca77f99557850cdf3a}{}virtual void \hyperlink{class_master_aea6e7956d8e9dcca77f99557850cdf3a}{add\+To\+Map} (\hyperlink{class_unit}{Unit} $\ast$input\+Unit, int x, int y)\label{class_master_aea6e7956d8e9dcca77f99557850cdf3a}
+
+\begin{DoxyCompactList}\small\item\em Adds \hyperlink{class_unit}{Unit} pointer to given x-\/y coordinates. \end{DoxyCompactList}\item 
+virtual vector$<$ int $>$ \hyperlink{class_master_a355cd520378a1ee4bbf340badf4163ae}{locate\+Unit} (\hyperlink{class_unit}{Unit} $\ast$input\+Unit)
+\begin{DoxyCompactList}\small\item\em Will search map for \hyperlink{class_unit}{Unit} pointer at given coordinates. \end{DoxyCompactList}\item 
+virtual vector$<$ int $>$ \hyperlink{class_master_a3ddcc34d8f2cbf14a247b7021e6cb57a}{request\+Free\+Space} ()
+\begin{DoxyCompactList}\small\item\em Finds an empty space on a map for the purpose. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_unit}{Unit} $\ast$ \hyperlink{class_master_a1401033a876ae9e4b38e5879537c5b2a}{locate\+Unit} (int row, int col)
+\begin{DoxyCompactList}\small\item\em Retrieves \hyperlink{class_unit}{Unit} at given coordinates. \end{DoxyCompactList}\item 
+\hypertarget{class_master_aadca1629b9756f20d101569fc783fbca}{}virtual void \hyperlink{class_master_aadca1629b9756f20d101569fc783fbca}{remove\+Destroyed\+Units} ()\label{class_master_aadca1629b9756f20d101569fc783fbca}
+
+\begin{DoxyCompactList}\small\item\em Function to ensure that \char`\"{}dead\char`\"{} units in teams are taken out of the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Controls the flow of operations in the simulation. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_master_a355cd520378a1ee4bbf340badf4163ae}{}\index{Master@{Master}!locate\+Unit@{locate\+Unit}}
+\index{locate\+Unit@{locate\+Unit}!Master@{Master}}
+\subsubsection[{locate\+Unit(\+Unit $\ast$input\+Unit)}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ int $>$ Master\+::locate\+Unit (
+\begin{DoxyParamCaption}
+\item[{{\bf Unit} $\ast$}]{input\+Unit}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_master_a355cd520378a1ee4bbf340badf4163ae}
+
+
+Will search map for \hyperlink{class_unit}{Unit} pointer at given coordinates. 
+
+\begin{DoxyReturn}{Returns}
+vector containing coordinates of given \hyperlink{class_unit}{Unit} pointer. Will 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_game_master}{Game\+Master}.
+
+\hypertarget{class_master_a1401033a876ae9e4b38e5879537c5b2a}{}\index{Master@{Master}!locate\+Unit@{locate\+Unit}}
+\index{locate\+Unit@{locate\+Unit}!Master@{Master}}
+\subsubsection[{locate\+Unit(int row, int col)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Unit} $\ast$ Master\+::locate\+Unit (
+\begin{DoxyParamCaption}
+\item[{int}]{row, }
+\item[{int}]{col}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_master_a1401033a876ae9e4b38e5879537c5b2a}
+
+
+Retrieves \hyperlink{class_unit}{Unit} at given coordinates. 
+
+\begin{DoxyReturn}{Returns}
+Unit$\ast$ at a given row and column coordinate. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_game_master}{Game\+Master}.
+
+\hypertarget{class_master_aed3a45ecf7482d60e4738701486f011c}{}\index{Master@{Master}!move\+Unit@{move\+Unit}}
+\index{move\+Unit@{move\+Unit}!Master@{Master}}
+\subsubsection[{move\+Unit(\+Unit $\ast$input\+Unit, string direction)}]{\setlength{\rightskip}{0pt plus 5cm}bool Master\+::move\+Unit (
+\begin{DoxyParamCaption}
+\item[{{\bf Unit} $\ast$}]{input\+Unit, }
+\item[{string}]{direction}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_master_aed3a45ecf7482d60e4738701486f011c}
+
+
+A simplified interface for moving Units, invokes \hyperlink{class_map}{Map}. 
+
+\begin{DoxyReturn}{Returns}
+boolean stating whether movement was correct. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_game_master}{Game\+Master}.
+
+\hypertarget{class_master_a3ddcc34d8f2cbf14a247b7021e6cb57a}{}\index{Master@{Master}!request\+Free\+Space@{request\+Free\+Space}}
+\index{request\+Free\+Space@{request\+Free\+Space}!Master@{Master}}
+\subsubsection[{request\+Free\+Space()}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ int $>$ Master\+::request\+Free\+Space (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_master_a3ddcc34d8f2cbf14a247b7021e6cb57a}
+
+
+Finds an empty space on a map for the purpose. 
+
+\begin{DoxyReturn}{Returns}
+vector containing empty coordinates on the map. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_game_master_a58aea57e4aac40805bbd71d19e8da2ac}{Game\+Master}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Master.\+h\item 
+Master.\+cpp\end{DoxyCompactItemize}

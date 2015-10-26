@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['elemental',['Elemental',['../class_elemental.html',1,'']]]
+  ['bludgeoningfactory',['BludgeoningFactory',['../class_bludgeoning_factory.html',1,'']]]
 ];

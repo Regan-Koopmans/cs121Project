@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['goblin',['Goblin',['../class_goblin.html',1,'']]]
+  ['dungeongame',['DungeonGame',['../class_dungeon_game.html',1,'']]]
 ];

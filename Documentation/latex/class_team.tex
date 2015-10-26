@@ -1,0 +1,106 @@
+\hypertarget{class_team}{}\section{Team Class Reference}
+\label{class_team}\index{Team@{Team}}
+
+
+Is the class from which all concrete Teams inherit.  
+
+
+
+
+{\ttfamily \#include $<$Team.\+h$>$}
+
+Inheritance diagram for Team\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_team}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_team_a23a02be0438b0603c7f811a0605ce207}{}\hyperlink{class_team_a23a02be0438b0603c7f811a0605ce207}{Team} (\hyperlink{class_game_master}{Game\+Master} $\ast$input\+Game\+Master)\label{class_team_a23a02be0438b0603c7f811a0605ce207}
+
+\begin{DoxyCompactList}\small\item\em Constructor for class \hyperlink{class_team}{Team}. \end{DoxyCompactList}\item 
+\hypertarget{class_team_ab4218fddd612d52bab47bec4feeb49de}{}virtual \hyperlink{class_team_ab4218fddd612d52bab47bec4feeb49de}{$\sim$\+Team} ()\label{class_team_ab4218fddd612d52bab47bec4feeb49de}
+
+\begin{DoxyCompactList}\small\item\em Destructor of class Teams. \end{DoxyCompactList}\item 
+\hypertarget{class_team_adf453899d929b3e96cff02bb88502f57}{}virtual void \hyperlink{class_team_adf453899d929b3e96cff02bb88502f57}{init\+Units} ()=0\label{class_team_adf453899d929b3e96cff02bb88502f57}
+
+\begin{DoxyCompactList}\small\item\em Abtract function fot intitializing the units of a team. \end{DoxyCompactList}\item 
+\hypertarget{class_team_a77d30d9a1379c152e415dacd9459f162}{}virtual void \hyperlink{class_team_a77d30d9a1379c152e415dacd9459f162}{update} (\hyperlink{class_team}{Team} $\ast$)=0\label{class_team_a77d30d9a1379c152e415dacd9459f162}
+
+\begin{DoxyCompactList}\small\item\em Observer functions. \end{DoxyCompactList}\item 
+\hypertarget{class_team_a5b2230619d5f2889b8ec4a1c213d230c}{}virtual void \hyperlink{class_team_a5b2230619d5f2889b8ec4a1c213d230c}{attack} ()=0\label{class_team_a5b2230619d5f2889b8ec4a1c213d230c}
+
+\begin{DoxyCompactList}\small\item\em Abstract function for attacking sequence. \end{DoxyCompactList}\item 
+\hypertarget{class_team_a016ca6682fff81eac2301bd6bf80db88}{}virtual void \hyperlink{class_team_a016ca6682fff81eac2301bd6bf80db88}{turn} ()=0\label{class_team_a016ca6682fff81eac2301bd6bf80db88}
+
+\begin{DoxyCompactList}\small\item\em Abstract function for turn sequence. \end{DoxyCompactList}\item 
+\hypertarget{class_team_aad3a08035daa8dc5abe0795a010d141d}{}void \hyperlink{class_team_aad3a08035daa8dc5abe0795a010d141d}{take\+Damage} (int damage)\label{class_team_aad3a08035daa8dc5abe0795a010d141d}
+
+\begin{DoxyCompactList}\small\item\em Function to distribute damage amongst a team. \end{DoxyCompactList}\item 
+\hypertarget{class_team_ad2d0d41421eeccbc1184b1a17c5e8112}{}virtual void \hyperlink{class_team_ad2d0d41421eeccbc1184b1a17c5e8112}{add\+Unit} (\hyperlink{class_unit}{Unit} $\ast$input\+Unit)\label{class_team_ad2d0d41421eeccbc1184b1a17c5e8112}
+
+\begin{DoxyCompactList}\small\item\em function to add a \hyperlink{class_unit}{Unit} to a \hyperlink{class_team}{Team}. \end{DoxyCompactList}\item 
+\hyperlink{class_unit}{Unit} $\ast$ \hyperlink{class_team_a453dc0ebd17df8f83fd619dd898287f8}{get\+Unit\+At} (int index)
+\begin{DoxyCompactList}\small\item\em Function to retrieve \hyperlink{class_unit}{Unit} at specific index. \end{DoxyCompactList}\item 
+\hypertarget{class_team_a8e5ac06209b2e02b81e717e204c2b162}{}void \hyperlink{class_team_a8e5ac06209b2e02b81e717e204c2b162}{set\+Game\+Master} (\hyperlink{class_game_master}{Game\+Master} $\ast$)\label{class_team_a8e5ac06209b2e02b81e717e204c2b162}
+
+\begin{DoxyCompactList}\small\item\em Function to allocate \hyperlink{class_team}{Team} to \hyperlink{class_game_master}{Game\+Master}. \end{DoxyCompactList}\item 
+int \hyperlink{class_team_a8690d30ee7ef4bb392a785a4ad5c9c2e}{get\+Size} ()
+\begin{DoxyCompactList}\small\item\em Determines the number of teams in the game. \end{DoxyCompactList}\item 
+\hypertarget{class_team_a03768f721a08528bd0a71cf1e304f31c}{}void \hyperlink{class_team_a03768f721a08528bd0a71cf1e304f31c}{set\+Map} (\hyperlink{class_map}{Map} $\ast$)\label{class_team_a03768f721a08528bd0a71cf1e304f31c}
+
+\begin{DoxyCompactList}\small\item\em Allocates \hyperlink{class_map}{Map} pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_team_a6bb143a18a36812a53732e41569d37c2}{}\hyperlink{class_map}{Map} $\ast$ {\bfseries map}\label{class_team_a6bb143a18a36812a53732e41569d37c2}
+
+\item 
+\hypertarget{class_team_a3e46f9986e378be9e3f7e546fcac0173}{}\hyperlink{class_game_master}{Game\+Master} $\ast$ {\bfseries game\+Master}\label{class_team_a3e46f9986e378be9e3f7e546fcac0173}
+
+\item 
+\hypertarget{class_team_ac3582d06395b1e07f91310b903680d41}{}vector$<$ \hyperlink{class_unit}{Unit} $\ast$ $>$ {\bfseries units}\label{class_team_ac3582d06395b1e07f91310b903680d41}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Is the class from which all concrete Teams inherit. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_team_a8690d30ee7ef4bb392a785a4ad5c9c2e}{}\index{Team@{Team}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!Team@{Team}}
+\subsubsection[{get\+Size()}]{\setlength{\rightskip}{0pt plus 5cm}int Team\+::get\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_team_a8690d30ee7ef4bb392a785a4ad5c9c2e}
+
+
+Determines the number of teams in the game. 
+
+\begin{DoxyReturn}{Returns}
+int containing the number of live teams. 
+\end{DoxyReturn}
+\hypertarget{class_team_a453dc0ebd17df8f83fd619dd898287f8}{}\index{Team@{Team}!get\+Unit\+At@{get\+Unit\+At}}
+\index{get\+Unit\+At@{get\+Unit\+At}!Team@{Team}}
+\subsubsection[{get\+Unit\+At(int index)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Unit} $\ast$ Team\+::get\+Unit\+At (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\label{class_team_a453dc0ebd17df8f83fd619dd898287f8}
+
+
+Function to retrieve \hyperlink{class_unit}{Unit} at specific index. 
+
+\begin{DoxyReturn}{Returns}
+Unit$\ast$ at given index. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Team.\+h\item 
+Team.\+cpp\end{DoxyCompactItemize}

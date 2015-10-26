@@ -4,9 +4,8 @@
 #include "GameMaster.h"
 
 /**
-* @class GameMaster
+* @class Master
 * @brief Controls the flow of operations in the simulation.
-*
 */
 
 class Master : public GameMaster

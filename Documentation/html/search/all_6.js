@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ogre',['Ogre',['../class_ogre.html',1,'Ogre'],['../class_ogre.html#aeb7c78cfd86de3a8e2175d87dac17c9f',1,'Ogre::Ogre()']]]
+  ['humanteam',['HumanTeam',['../class_human_team.html',1,'HumanTeam'],['../class_human_team.html#aa4926770a88ce2e221fc695767b12edc',1,'HumanTeam::HumanTeam()']]]
 ];

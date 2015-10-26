@@ -8,7 +8,8 @@
 using namespace std;
 
 /**
-* @class SinglePlayer A special case of Team, where there is only one unit.
+* @class SinglePlayer
+* @brief  A special case of Team, where there is only one unit.
 */
 
 class SinglePlayer : public Team

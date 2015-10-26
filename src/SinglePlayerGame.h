@@ -4,7 +4,8 @@
 #include "DungeonGame.h"
 
 /**
-* @class SinglePlayerGame a concrete DungeonGame defining a standard single player game.
+* @class SinglePlayerGame
+* @brief a concrete DungeonGame defining a standard single player game.
 */
 class SinglePlayerGame : public DungeonGame
 {

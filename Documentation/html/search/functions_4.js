@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mage',['Mage',['../class_mage.html#a9d7d4455a6fa1f8e35117e0dc301d082',1,'Mage']]]
+  ['elemental',['Elemental',['../class_elemental.html#ab1c090ccbb2ac64d7cd65dbef999d9fb',1,'Elemental']]]
 ];

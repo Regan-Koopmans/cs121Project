@@ -1,5 +1,10 @@
-\section{Piercing\+Factory Class Reference}
+\hypertarget{class_piercing_factory}{}\section{Piercing\+Factory Class Reference}
 \label{class_piercing_factory}\index{Piercing\+Factory@{Piercing\+Factory}}
+
+
+Concrete factory that creates \hyperlink{class_thief}{Thief} or \hyperlink{class_goblin}{Goblin} objects.  
+
+
 
 
 {\ttfamily \#include $<$Piercing\+Factory.\+h$>$}
@@ -13,17 +18,24 @@ Inheritance diagram for Piercing\+Factory\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\bf Unit} $\ast$ {\bfseries make\+Light} ()\label{class_piercing_factory_a7d8f0643578e6985d676ab65242b9c2c}
+\hypertarget{class_piercing_factory_a3a2f3736e85a5c4b0ad0160b1b34d796}{}virtual \hyperlink{class_unit}{Unit} $\ast$ \hyperlink{class_piercing_factory_a3a2f3736e85a5c4b0ad0160b1b34d796}{create\+Player} ()\label{class_piercing_factory_a3a2f3736e85a5c4b0ad0160b1b34d796}
 
-\item 
-{\bf Unit} $\ast$ {\bfseries make\+Dark} ()\label{class_piercing_factory_af55c951c6044905d060c0e698d0faafc}
+\begin{DoxyCompactList}\small\item\em Concrete implementation of create\+Player, will create a Theif. \end{DoxyCompactList}\item 
+\hypertarget{class_piercing_factory_a042235a24b114b8b66e3e7733109e504}{}virtual \hyperlink{class_unit}{Unit} $\ast$ \hyperlink{class_piercing_factory_a042235a24b114b8b66e3e7733109e504}{create\+Monster} ()\label{class_piercing_factory_a042235a24b114b8b66e3e7733109e504}
 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Concrete impletation of create\+Monster, will create a \hyperlink{class_goblin}{Goblin}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
 
 
 \subsection{Detailed Description}
-D\+O\+X\+Y\+G\+E\+N C\+O\+M\+M\+E\+N\+T H\+E\+R\+E. 
+Concrete factory that creates \hyperlink{class_thief}{Thief} or \hyperlink{class_goblin}{Goblin} objects. 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_unit_factory}{Unit\+Factory} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Piercing\+Factory.\+h\end{DoxyCompactItemize}
+Piercing\+Factory.\+h\item 
+Piercing\+Factory.\+cpp\end{DoxyCompactItemize}

@@ -4,10 +4,8 @@
 #include "Unit.h"
 
 /**
-
-* @class Unitfactory
-* @brief Defines an interface for creating players and monsters
-
+* @class UnitFactory
+* @brief Defines an interface for creating type Player and type Monster
 */
 
 class UnitFactory

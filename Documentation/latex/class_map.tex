@@ -1,0 +1,119 @@
+\hypertarget{class_map}{}\section{Map Class Reference}
+\label{class_map}\index{Map@{Map}}
+
+
+Enables the concepts of position and movement.  
+
+
+
+
+{\ttfamily \#include $<$Map.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_map_aa403fbe09394ccf39747588f5168e3b2}{$\sim$\+Map} ()
+\item 
+\hyperlink{class_map_ac799bd535a5174700b11ebf7fa2c62e4}{Map} (char $\ast$)
+\item 
+void \hyperlink{class_map_a1cefc1b8ed6692667e2019f64acc0f5a}{print\+Map} ()
+\item 
+bool \hyperlink{class_map_af5d2cdc79ed8fb0ea8c9b8eb649a1046}{Move} (int, int, int, int)
+\item 
+void \hyperlink{class_map_adec4a268e6a6eb539595a32e7edfa27a}{set\+Map} ()
+\item 
+int \hyperlink{class_map_a2960ea8c9260e0b6e59860c3a29b1689}{get\+Map\+Size\+X} ()
+\item 
+int \hyperlink{class_map_a47c7f7c1422f039670062c01dbb95c7f}{get\+Map\+Size\+Y} ()
+\item 
+char \hyperlink{class_map_aa2e6440872eabd43083a73909ba60464}{get\+Map\+Tile} (int x, int y)
+\item 
+void \hyperlink{class_map_ad46f1eba1dcd394581f9cab3ae8d5256}{set\+Map\+Tile} (char c, int x, int y)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Enables the concepts of position and movement. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_map_aa403fbe09394ccf39747588f5168e3b2}{}\index{Map@{Map}!````~Map@{$\sim$\+Map}}
+\index{````~Map@{$\sim$\+Map}!Map@{Map}}
+\subsubsection[{$\sim$\+Map()}]{\setlength{\rightskip}{0pt plus 5cm}Map\+::$\sim$\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_map_aa403fbe09394ccf39747588f5168e3b2}
+@ brief Destructor for class map. Fill in Destructor here\hypertarget{class_map_ac799bd535a5174700b11ebf7fa2c62e4}{}\index{Map@{Map}!Map@{Map}}
+\index{Map@{Map}!Map@{Map}}
+\subsubsection[{Map(char $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}Map\+::\+Map (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file\+Name}
+\end{DoxyParamCaption}
+)}\label{class_map_ac799bd535a5174700b11ebf7fa2c62e4}
+@ brief Constructor that takes a filename for reading in map 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_map_a2960ea8c9260e0b6e59860c3a29b1689}{}\index{Map@{Map}!get\+Map\+Size\+X@{get\+Map\+Size\+X}}
+\index{get\+Map\+Size\+X@{get\+Map\+Size\+X}!Map@{Map}}
+\subsubsection[{get\+Map\+Size\+X()}]{\setlength{\rightskip}{0pt plus 5cm}int Map\+::get\+Map\+Size\+X (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_map_a2960ea8c9260e0b6e59860c3a29b1689}
+@ brief Getter function for maximum x bounds. @ return int containing maximum x value; \hypertarget{class_map_a47c7f7c1422f039670062c01dbb95c7f}{}\index{Map@{Map}!get\+Map\+Size\+Y@{get\+Map\+Size\+Y}}
+\index{get\+Map\+Size\+Y@{get\+Map\+Size\+Y}!Map@{Map}}
+\subsubsection[{get\+Map\+Size\+Y()}]{\setlength{\rightskip}{0pt plus 5cm}int Map\+::get\+Map\+Size\+Y (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_map_a47c7f7c1422f039670062c01dbb95c7f}
+@ brief Getter function for maximum y bounds. @ return int containing maximum y value; \hypertarget{class_map_aa2e6440872eabd43083a73909ba60464}{}\index{Map@{Map}!get\+Map\+Tile@{get\+Map\+Tile}}
+\index{get\+Map\+Tile@{get\+Map\+Tile}!Map@{Map}}
+\subsubsection[{get\+Map\+Tile(int x, int y)}]{\setlength{\rightskip}{0pt plus 5cm}char Map\+::get\+Map\+Tile (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\label{class_map_aa2e6440872eabd43083a73909ba60464}
+@ brief Function to retreive a specific char from the map. @ char containing the tile at given coordinates \hypertarget{class_map_af5d2cdc79ed8fb0ea8c9b8eb649a1046}{}\index{Map@{Map}!Move@{Move}}
+\index{Move@{Move}!Map@{Map}}
+\subsubsection[{Move(int, int, int, int)}]{\setlength{\rightskip}{0pt plus 5cm}bool Map\+::\+Move (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{new\+X, }
+\item[{int}]{new\+Y}
+\end{DoxyParamCaption}
+)}\label{class_map_af5d2cdc79ed8fb0ea8c9b8eb649a1046}
+@ brief Function to move a specific tile to another location \begin{DoxyReturn}{Returns}
+bool containing whether the movement was successful. 
+\end{DoxyReturn}
+\hypertarget{class_map_a1cefc1b8ed6692667e2019f64acc0f5a}{}\index{Map@{Map}!print\+Map@{print\+Map}}
+\index{print\+Map@{print\+Map}!Map@{Map}}
+\subsubsection[{print\+Map()}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+::print\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_map_a1cefc1b8ed6692667e2019f64acc0f5a}
+@ brief Function to display the map in the terminal. \hypertarget{class_map_adec4a268e6a6eb539595a32e7edfa27a}{}\index{Map@{Map}!set\+Map@{set\+Map}}
+\index{set\+Map@{set\+Map}!Map@{Map}}
+\subsubsection[{set\+Map()}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+::set\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_map_adec4a268e6a6eb539595a32e7edfa27a}
+@ brief \hypertarget{class_map_ad46f1eba1dcd394581f9cab3ae8d5256}{}\index{Map@{Map}!set\+Map\+Tile@{set\+Map\+Tile}}
+\index{set\+Map\+Tile@{set\+Map\+Tile}!Map@{Map}}
+\subsubsection[{set\+Map\+Tile(char c, int x, int y)}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+::set\+Map\+Tile (
+\begin{DoxyParamCaption}
+\item[{char}]{c, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\label{class_map_ad46f1eba1dcd394581f9cab3ae8d5256}
+@ brief Function to set the tile at specific coordinates. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Map.\+h\item 
+Map.\+cpp\end{DoxyCompactItemize}

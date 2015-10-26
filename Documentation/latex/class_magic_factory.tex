@@ -1,5 +1,10 @@
-\section{Magic\+Factory Class Reference}
+\hypertarget{class_magic_factory}{}\section{Magic\+Factory Class Reference}
 \label{class_magic_factory}\index{Magic\+Factory@{Magic\+Factory}}
+
+
+Concrete Factory that creates a \hyperlink{class_mage}{Mage} or \hyperlink{class_elemental}{Elemental} object.  
+
+
 
 
 {\ttfamily \#include $<$Magic\+Factory.\+h$>$}
@@ -13,17 +18,24 @@ Inheritance diagram for Magic\+Factory\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\bf Unit} $\ast$ {\bfseries make\+Light} ()\label{class_magic_factory_a2f1ef4ca86f4856a2fcc77bfe4b4a19e}
+\hypertarget{class_magic_factory_a3021b979bd991e32e311c8869d500b46}{}virtual \hyperlink{class_unit}{Unit} $\ast$ \hyperlink{class_magic_factory_a3021b979bd991e32e311c8869d500b46}{create\+Player} ()\label{class_magic_factory_a3021b979bd991e32e311c8869d500b46}
 
-\item 
-{\bf Unit} $\ast$ {\bfseries make\+Dark} ()\label{class_magic_factory_aeff3d4611a7da2251a18038da21b5b2c}
+\begin{DoxyCompactList}\small\item\em Concrete implementation of create\+Player, will create a \hyperlink{class_mage}{Mage}. \end{DoxyCompactList}\item 
+\hypertarget{class_magic_factory_aaef72871585cca14e5b847fc44ce3c2b}{}virtual \hyperlink{class_unit}{Unit} $\ast$ \hyperlink{class_magic_factory_aaef72871585cca14e5b847fc44ce3c2b}{create\+Monster} ()\label{class_magic_factory_aaef72871585cca14e5b847fc44ce3c2b}
 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Concrete impletation of create\+Monster, will create an \hyperlink{class_elemental}{Elemental}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
 
 
 \subsection{Detailed Description}
-D\+O\+X\+Y\+G\+E\+N C\+O\+M\+M\+E\+N\+T H\+E\+R\+E. 
+Concrete Factory that creates a \hyperlink{class_mage}{Mage} or \hyperlink{class_elemental}{Elemental} object. 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_unit_factory}{Unit\+Factory} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Magic\+Factory.\+h\end{DoxyCompactItemize}
+Magic\+Factory.\+h\item 
+Magic\+Factory.\+cpp\end{DoxyCompactItemize}
