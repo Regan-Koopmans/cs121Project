@@ -10,15 +10,7 @@
 
 using namespace std;
 
-// SinglePlayer::SinglePlayer()
-// {
-//
-// }
-//
-// SinglePlayer::SinglePlayer(string inputClass)
-// {
-//
-// }
+
 
 SinglePlayer::SinglePlayer(GameMaster * gameMaster) : Team(gameMaster)
 {
